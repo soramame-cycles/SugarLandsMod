@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "sugards:sugar_diamond_from_smelting"
+    ]
+  },
+  "criteria": {
+    "has_sugar_candy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:sugar_candy"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "sugards:sugar_diamond_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_candy",
+      "has_the_recipe"
+    ]
+  ]
+}

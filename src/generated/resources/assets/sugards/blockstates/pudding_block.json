@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sugards:block/pudding_block"
+    }
+  }
+}

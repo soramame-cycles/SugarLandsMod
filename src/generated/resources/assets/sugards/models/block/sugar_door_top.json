@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "bottom": "sugards:block/sugar_door_lower",
+    "top": "sugards:block/sugar_door_upper"
+  }
+}

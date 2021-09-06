@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "sugards:sugar_log",
+    "sugards:stripped_sugar_log",
+    "sugards:sugar_wood",
+    "sugards:stripped_sugar_wood"
+  ]
+}

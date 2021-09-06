@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "sugards:block/sugar_log",
+    "bottom": "sugards:block/sugar_log",
+    "top": "sugards:block/sugar_log"
+  }
+}

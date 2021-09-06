@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sugards:block/cookie_block"
+    }
+  }
+}

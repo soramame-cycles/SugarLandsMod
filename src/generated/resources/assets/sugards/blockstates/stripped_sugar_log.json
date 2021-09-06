@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "sugards:block/stripped_sugar_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "sugards:block/stripped_sugar_log"
+    },
+    "axis=z": {
+      "model": "sugards:block/stripped_sugar_log_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "sugards:sugar_bricks_wall",
+    "sugards:sugar_cobblestone_wall",
+    "sugards:sugar_stone_wall"
+  ]
+}

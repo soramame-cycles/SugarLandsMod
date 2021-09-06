@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "pane": "sugards:block/sugar_candy",
+    "edge": "sugards:block/sugar_candy"
+  }
+}
