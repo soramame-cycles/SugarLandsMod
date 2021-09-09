@@ -53,7 +53,6 @@ public class SugarLandsCore {
 			gen.addProvider(new SLJaJpLanguageProvider(gen,MOD_ID));
 			gen.addProvider(new SLBlockTagsProvider(gen, MOD_ID,event.getExistingFileHelper()));
 			gen.addProvider(new SLOriginalBlockTagsProvider(gen,MOD_ID,event.getExistingFileHelper()));
-			//gen.addProvider(new BlockModelProviderEx(gen, MOD_ID,event.getExistingFileHelper()));
 		}
 		if(event.includeServer()) {
 			gen.addProvider(new SLLootTableProvider(gen));
