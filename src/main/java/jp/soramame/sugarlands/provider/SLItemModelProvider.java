@@ -2,8 +2,6 @@ package jp.soramame.sugarlands.provider;
 
 import java.util.Objects;
 
-import jp.soramame.sugarlands.SugarLandsCore;
-import jp.soramame.sugarlands.init.SLBlockItems;
 import jp.soramame.sugarlands.init.SLItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.Item;
@@ -23,27 +21,26 @@ public class SLItemModelProvider extends ItemModelProvider {
 	protected void registerModels() {
 		simpleItem(SLItems.Sugar_Diamond.get());
 		simpleItem(SLItems.Sugar_Diamond_nugget.get());
-		paneBlockItem(SLBlockItems.Sugar_Candy_Pane.get(),"sugar_candy");
-		simpleItem(SLBlockItems.Sugar_Door.get());
+		simpleItem(SLItems.Bismuth_Crystal.get());
+		simpleItem(SLItems.Azuki_Been.get());
+		simpleItem(SLItems.Azuki_Paste.get());
+		simpleItem(SLItems.Azuki_Paste_Bun.get());
 	}
 
-	private void simpleItem(Item item) {
+	public void simpleItem(Item item) {
 		ResourceLocation name = Objects.requireNonNull(item.getRegistryName());
 		singleTexture(name.getPath(), mcLoc(folder + "/generated"), "layer0", new ResourceLocation(name.getNamespace(), folder + "/" + name.getPath()));
 	}
+	public void toolItem(Item item) {
+		ResourceLocation name = Objects.requireNonNull(item.getRegistryName());
+		singleTexture(name.getPath(),mcLoc(folder + "/handheld"),"layer0",new ResourceLocation(name.getNamespace(), folder + "/" + name.getPath()));
+	}
 	/**めんどいからやらんけどこのコメントを見た君は
 	 * "sugards:block/"+name.getPath()じゃなくて
-	 * MOD_ID+":block/"+name.getPath()とかにするんだぞmodidを変えたときにここも変えないといけなくなるぞ！！*/
+	 * MOD_ID+":block/"+name.getPath()とかにするんだぞmodidを変えたときにここも変えないといけなくなるぞ！！
+	 * name.getNamespace()じゃね？*/
 	public void blockItem(Item item) {
 		ResourceLocation name = Objects.requireNonNull(item.getRegistryName());
-		withExistingParent(name.getPath(),"sugards:block/"+name.getPath());
-	}
-	public void fenceblockItem(Item item) {
-		ResourceLocation name = Objects.requireNonNull(item.getRegistryName());
-		withExistingParent(name.getPath(),SugarLandsCore.MOD_ID+":block/"+name.getPath()+"_inventory");
-	}
-	public void paneBlockItem(Item item,String base) {
-		ResourceLocation name = Objects.requireNonNull(item.getRegistryName());
-		singleTexture(name.getPath(), mcLoc(folder + "/generated"), "layer0", new ResourceLocation(name.getNamespace(), "block/" + base));
+		withExistingParent(name.getPath(),name.getNamespace() + ":block/" + name.getPath());
 	}
 }

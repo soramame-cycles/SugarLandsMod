@@ -1,5 +1,7 @@
 package jp.soramame.sugarlands.provider;
 
+import java.util.Objects;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -97,15 +99,15 @@ public class SLBlockStateProvider extends BlockStateProvider {
 		wallBlockWithItem((WallBlock) SLBlocks.Sugar_Cobblestone_Wall.get(), sugarcobble());
 		wallBlockWithItem((WallBlock) SLBlocks.Sugar_Bricks_Wall.get(),
 				new ResourceLocation("sugards:block/sugar_bricks"));
-		//下記に注釈あり
-		paneBlock((PaneBlock) SLBlocks.Sugar_Candy_Pane.get(),
+		paneBlockWithItem((PaneBlock) SLBlocks.Sugar_Candy_Pane.get(),
 				new ResourceLocation("sugards:block/sugar_candy"),
 				new ResourceLocation("sugards:block/sugar_candy"));
 		trapdoorWithItem((TrapDoorBlock) SLBlocks.Sugar_Planks_TrapDoor.get(),
 				new ResourceLocation("sugards:block/sugar_trapdoor"), false);
-		doorBlock((DoorBlock) SLBlocks.Sugar_Door.get(),
+		doorBlockWithItem((DoorBlock) SLBlocks.Sugar_Door.get(),
 				new ResourceLocation("sugards:block/sugar_door_lower"),
-				new ResourceLocation("sugards:block/sugar_door_upper"));
+				new ResourceLocation("sugards:block/sugar_door_upper"),
+				new ResourceLocation("sugards:item/sugar_door"));
 		torchWithItem(SLBlocks.Sugar_Torch.get(), sugartorch());
 		wallTorchBlock(SLBlocks.Wall_Sugar_Torch.get(),sugartorch(), sugartorch(), sugartorch(), sugartorch());
 		buttonWithItem(SLBlocks.Sugar_Planks_Button.get(),sugarplanks());
@@ -119,10 +121,9 @@ public class SLBlockStateProvider extends BlockStateProvider {
 		pillarBlockWithItem(SLBlocks.Stripped_Sugar_Wood.get(),
 				new ResourceLocation("sugards:block/stripped_sugar_log"),
 				new ResourceLocation("sugards:block/stripped_sugar_log"));
-		/**paneBlock,doorBlockの場合はアイテムモデルが生成されないので作成を忘れないように
-		 * 自分はSLItemModelProvider.javaで別途アイテムモデルを生成する方法を取った
-		 * 他のブロックはアイテムモデル生成もいけそうなのでここを見に来た人の為にやっておく。参考になるかわからんが
-		 * ボタン…*/
+		/** ほとんどのブロックはアイテムモデル生成もいけそうなのでここを見に来た人の為にやっておく。
+		 * 参考になるかわからんが
+		 * ボタン…は改良の余地あり*/
 	}
 
 	/**BlockWithItem*/
@@ -182,6 +183,14 @@ public class SLBlockStateProvider extends BlockStateProvider {
 	public void pressurePlateWithItem(Block block,ResourceLocation rl) {
 		pressurePlateBlock(block, rl, rl);
 		simpleBlockItem(block, pressurePlate(block,rl));
+	}
+	public void paneBlockWithItem(PaneBlock block, ResourceLocation pane, ResourceLocation edge) {
+		paneBlock(block,pane,edge);
+		SimpleItem(block, pane);
+	}
+	public void doorBlockWithItem(DoorBlock block,ResourceLocation bottom, ResourceLocation top,ResourceLocation item) {
+		doorBlock(block,bottom,top);
+		SimpleItem(block,item);
 	}
 
 	/**Blocks*/
@@ -335,6 +344,10 @@ public class SLBlockStateProvider extends BlockStateProvider {
 			.with(AbstractButtonBlock.FACING, Direction.WEST)
 			.with(AbstractButtonBlock.POWERED, true).modelForState()
 			.modelFile(wwt).rotationY(270).rotationX(90).uvLock(true).addModel().partialState();
+	}
+	public void SimpleItem(Block block,ResourceLocation texture) {
+		ResourceLocation name = Objects.requireNonNull(block.getRegistryName());
+		itemModels().singleTexture(name.getPath(), mcLoc("minecraft:item/generated"), "layer0", texture);
 	}
 	/**wakarann*/
 	public void torchBlock(Block block, ConfiguredModel... models) {
