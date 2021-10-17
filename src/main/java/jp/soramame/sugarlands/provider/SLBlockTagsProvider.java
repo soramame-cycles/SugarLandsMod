@@ -15,19 +15,19 @@ public class SLBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags() {
-		this.tag(BlockTags.BEACON_BASE_BLOCKS).add(SLBlocks.Sugar_Diamond_Block.get(),SLBlocks.Bismuth_Crystal_Block.get());
-		this.tag(BlockTags.LOGS).add(SLBlocks.Sugar_Log.get(),SLBlocks.Stripped_Sugar_Log.get(),SLBlocks.Sugar_Wood.get(),SLBlocks.Stripped_Sugar_Wood.get());
-		this.tag(BlockTags.LEAVES).add(SLBlocks.Sugar_Leaves.get());
-		this.tag(BlockTags.INFINIBURN_OVERWORLD).add(SLBlocks.Sugarrack.get());
-		this.tag(BlockTags.INFINIBURN_NETHER).add(SLBlocks.Sugarrack.get());
-		this.tag(BlockTags.INFINIBURN_END).add(SLBlocks.Sugarrack.get());
-		this.tag(BlockTags.DRAGON_IMMUNE).add(SLBlocks.End_Sugar_Stone.get(),SLBlocks.Sugar_Diamond_Block.get());
-		this.tag(BlockTags.SAPLINGS).add(SLBlocks.Sugar_Sapling.get());
+		this.tag(BlockTags.BEACON_BASE_BLOCKS).add(SLBlocks.SUGAR_DIAMOND_BLOCK.get(),SLBlocks.BISMUTH_CRYSTAL_BLOCK.get());
+		this.tag(BlockTags.LOGS).add(SLBlocks.SUGAR_LOG.get(),SLBlocks.STRIPPED_SUGAR_LOG.get(),SLBlocks.SUGAR_WOOD.get(),SLBlocks.STRIPPED_SUGAR_WOOD.get());
+		this.tag(BlockTags.LEAVES).add(SLBlocks.SUGAR_LEAVES.get());
+		this.tag(BlockTags.INFINIBURN_OVERWORLD).add(SLBlocks.SUGARRACK.get());
+		this.tag(BlockTags.INFINIBURN_NETHER).add(SLBlocks.SUGARRACK.get());
+		this.tag(BlockTags.INFINIBURN_END).add(SLBlocks.SUGARRACK.get());
+		this.tag(BlockTags.DRAGON_IMMUNE).add(SLBlocks.END_SUGAR_STONE.get(),SLBlocks.SUGAR_DIAMOND_BLOCK.get());
+		this.tag(BlockTags.SAPLINGS).add(SLBlocks.SUGAR_SAPLING.get());
 		this.tag(BlockTags.WOODEN_FENCES).add(new Block[] {
-				SLBlocks.Sugar_Log_Fence.get(),SLBlocks.Sugar_Planks_Fence.get()
+				SLBlocks.SUGAR_LOG_FENCE.get(),SLBlocks.SUGAR_PLANKS_FENCE.get()
 		});
 		this.tag(BlockTags.WALLS).add(new Block[] {
-				SLBlocks.Sugar_Bricks_Wall.get(),SLBlocks.Sugar_Cobblestone_Wall.get(),SLBlocks.Sugar_Stone_Wall.get()
+				SLBlocks.SUGAR_BRICKS_WALL.get(),SLBlocks.SUGAR_COBBLESTONE_WALL.get(),SLBlocks.SUGAR_STONE_WALL.get()
 		});
 	}
 

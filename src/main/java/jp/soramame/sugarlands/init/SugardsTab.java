@@ -11,7 +11,7 @@ public class SugardsTab extends ItemGroup {
 
 	@Override
 	public ItemStack makeIcon() {
-		ItemStack itemstack = new ItemStack(SLBlocks.Sugar_Block.get());
+		ItemStack itemstack = new ItemStack(SLBlocks.SUGAR_BLOCK.get());
 		return itemstack;
 	}
 

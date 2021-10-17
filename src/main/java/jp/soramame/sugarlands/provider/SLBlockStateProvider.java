@@ -41,84 +41,84 @@ public class SLBlockStateProvider extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-		simpleBlockWithItem(SLBlocks.Sugar_Block.get());
-		simpleBlockWithItem(SLBlocks.Sugar_Stone.get());
-		simpleBlockWithItem(SLBlocks.Sugar_Candy.get());
-		simpleBlockWithItem(SLBlocks.Sugar_Diamond_Ore.get());
-		simpleBlockWithItem(SLBlocks.Sugar_Diamond_Block.get());
-		simpleBlockWithItem(SLBlocks.Sugar_CobbleStone.get());
-		simpleBlockWithItem(SLBlocks.Sugar_Bricks.get());
-		simpleBlockWithItem(SLBlocks.Moist_Sugar_Block.get());
-		simpleBlockWithItem(SLBlocks.Raw_Sugar_Block.get());
-		simpleBlockWithItem(SLBlocks.Lit_Raw_Sugar_Block.get());
-		simpleBlockWithItem(SLBlocks.Sugarrack.get());
-		simpleBlockWithItem(SLBlocks.End_Sugar_Stone.get());
-		simpleBlockWithItem(SLBlocks.Bismuth_Ore.get());
-		simpleBlockWithItem(SLBlocks.Bismuth_Crystal_Block.get());
-		simpleBlockWithItem(SLBlocks.Pudding_Block.get());
-		simpleBlockWithItem(SLBlocks.Calamel_Sauce.get());
-		simpleBlockWithItem(SLBlocks.Cookie_Block.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_STONE.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_CANDY.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_DIAMOND_ORE.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_DIAMOND_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_COBBLESTONE.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_BRICKS.get());
+		simpleBlockWithItem(SLBlocks.MOIST_SUGAR_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.RAW_SUGAR_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.LIT_RAW_SUGAR_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.SUGARRACK.get());
+		simpleBlockWithItem(SLBlocks.END_SUGAR_STONE.get());
+		simpleBlockWithItem(SLBlocks.BISMUTH_ORE.get());
+		simpleBlockWithItem(SLBlocks.BISMUTH_CRYSTAL_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.PUDDING_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.CALAMEL_SAUCE.get());
+		simpleBlockWithItem(SLBlocks.COOKIE_BLOCK.get());
 		//axisBlock((RotatedPillarBlock) SLBlocks.Sugar_Pillar.get());
 		//上記のコードは何故かは良く分からないがmodels.blockのpillarの方のsideとendが入れ替わる
-		simpleBlockWithItem(SLBlocks.Rotten_Flesh_Block.get());
-		simpleBlockWithItem(SLBlocks.Black_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Blue_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Brown_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Cyan_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Gray_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Green_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Light_Blue_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Light_Gray_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Lime_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Magenta_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Orange_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Pink_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Purple_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Red_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.White_Ice_Candy.get());
-		simpleBlockWithItem(SLBlocks.Yellow_Ice_Candy.get());
-		logBlockWithItem((RotatedPillarBlock) SLBlocks.Sugar_Log.get(),sugarlog(),
+		simpleBlockWithItem(SLBlocks.ROTTEN_FLESH_BLOCK.get());
+		simpleBlockWithItem(SLBlocks.BLACK_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.BLUE_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.BROWN_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.CYAN_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.GRAY_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.GREEN_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.LIGHT_BLUE_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.LIGHT_GRAY_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.LIME_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.MAGENTA_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.ORANGE_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.PINK_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.PURPLE_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.RED_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.WHITE_ICE_CANDY.get());
+		simpleBlockWithItem(SLBlocks.YELLOW_ICE_CANDY.get());
+		logBlockWithItem((RotatedPillarBlock) SLBlocks.SUGAR_LOG.get(),sugarlog(),
 				new ResourceLocation("sugards:block/sugar_log_top"));
-		simpleBlockWithItem(SLBlocks.Sugar_Leaves.get());
-		simpleBlockWithItem(SLBlocks.Sugar_Planks.get());
-		stairBlockWithItem((StairsBlock) SLBlocks.Sugar_Planks_Stairs.get(), sugarplanks());
-		stairBlockWithItem((StairsBlock) SLBlocks.Sugar_Stone_Stairs.get(), sugarstone());
-		stairBlockWithItem((StairsBlock) SLBlocks.Sugar_Cobblestone_Stairs.get(), sugarcobble());
-		stairBlockWithItem((StairsBlock) SLBlocks.Sugar_Log_Stairs.get(), sugarlog());
-		slabBlockWithItem((SlabBlock) SLBlocks.Sugar_Planks_Slab.get(), sugarplanks(), sugarplanks());
-		slabBlockWithItem((SlabBlock) SLBlocks.Sugar_Stone_Slab.get(), sugarstone(), sugarstone());
-		doubleslabBlock(SLBlocks.Sugar_Cobblestone_Slab.get(),
+		simpleBlockWithItem(SLBlocks.SUGAR_LEAVES.get());
+		simpleBlockWithItem(SLBlocks.SUGAR_PLANKS.get());
+		stairBlockWithItem((StairsBlock) SLBlocks.SUGAR_PLANKS_STAIRS.get(), sugarplanks());
+		stairBlockWithItem((StairsBlock) SLBlocks.SUGAR_STONE_STAIRS.get(), sugarstone());
+		stairBlockWithItem((StairsBlock) SLBlocks.SUGAR_COBBLESTONE_STAIRS.get(), sugarcobble());
+		stairBlockWithItem((StairsBlock) SLBlocks.SUGAR_LOG_STAIRS.get(), sugarlog());
+		slabBlockWithItem((SlabBlock) SLBlocks.SUGAR_PLANKS_SLAB.get(), sugarplanks(), sugarplanks());
+		slabBlockWithItem((SlabBlock) SLBlocks.SUGAR_STONE_SLAB.get(), sugarstone(), sugarstone());
+		doubleslabBlock(SLBlocks.SUGAR_COBBLESTONE_SLAB.get(),
 				new ResourceLocation("sugards:block/sugar_cobblestone_slab_double"),sugarcobble());
-		slabBlockWithItem((SlabBlock) SLBlocks.Sugar_Cobblestone_Slab.get(),
+		slabBlockWithItem((SlabBlock) SLBlocks.SUGAR_COBBLESTONE_SLAB.get(),
 				new ResourceLocation("sugards:block/sugar_cobblestone_slab_double"),sugarcobble());
-		slabBlockWithItem((SlabBlock) SLBlocks.Sugar_Log_Slab.get(), sugarlog(), sugarlog());
-		fenceBlockWithItem((FenceBlock) SLBlocks.Sugar_Log_Fence.get(), sugarlog());
-		fenceBlockWithItem((FenceBlock) SLBlocks.Sugar_Log_Fence.get(),sugarlog());
-		fenceBlockWithItem((FenceBlock) SLBlocks.Sugar_Planks_Fence.get(),sugarplanks());
-		wallBlockWithItem((WallBlock) SLBlocks.Sugar_Stone_Wall.get(), sugarstone());
-		wallBlockWithItem((WallBlock) SLBlocks.Sugar_Cobblestone_Wall.get(), sugarcobble());
-		wallBlockWithItem((WallBlock) SLBlocks.Sugar_Bricks_Wall.get(),
+		slabBlockWithItem((SlabBlock) SLBlocks.SUGAR_LOG_SLAB.get(), sugarlog(), sugarlog());
+		fenceBlockWithItem((FenceBlock) SLBlocks.SUGAR_LOG_FENCE.get(), sugarlog());
+		fenceBlockWithItem((FenceBlock) SLBlocks.SUGAR_LOG_FENCE.get(),sugarlog());
+		fenceBlockWithItem((FenceBlock) SLBlocks.SUGAR_PLANKS_FENCE.get(),sugarplanks());
+		wallBlockWithItem((WallBlock) SLBlocks.SUGAR_STONE_WALL.get(), sugarstone());
+		wallBlockWithItem((WallBlock) SLBlocks.SUGAR_COBBLESTONE_WALL.get(), sugarcobble());
+		wallBlockWithItem((WallBlock) SLBlocks.SUGAR_BRICKS_WALL.get(),
 				new ResourceLocation("sugards:block/sugar_bricks"));
-		paneBlockWithItem((PaneBlock) SLBlocks.Sugar_Candy_Pane.get(),
+		paneBlockWithItem((PaneBlock) SLBlocks.SUGAR_CANDY_PANE.get(),
 				new ResourceLocation("sugards:block/sugar_candy"),
 				new ResourceLocation("sugards:block/sugar_candy"));
-		trapdoorWithItem((TrapDoorBlock) SLBlocks.Sugar_Planks_TrapDoor.get(),
+		trapdoorWithItem((TrapDoorBlock) SLBlocks.SUGAR_PLANKS_TRAPDOOR.get(),
 				new ResourceLocation("sugards:block/sugar_trapdoor"), false);
-		doorBlockWithItem((DoorBlock) SLBlocks.Sugar_Door.get(),
+		doorBlockWithItem((DoorBlock) SLBlocks.SUGAR_DOOR.get(),
 				new ResourceLocation("sugards:block/sugar_door_lower"),
 				new ResourceLocation("sugards:block/sugar_door_upper"),
 				new ResourceLocation("sugards:item/sugar_door"));
-		torchWithItem(SLBlocks.Sugar_Torch.get(), sugartorch());
-		wallTorchBlock(SLBlocks.Wall_Sugar_Torch.get(),sugartorch(), sugartorch(), sugartorch(), sugartorch());
-		buttonWithItem(SLBlocks.Sugar_Planks_Button.get(),sugarplanks());
-		buttonWithItem(SLBlocks.Sugar_Stone_Button.get(),sugarstone());
-		pressurePlateWithItem(SLBlocks.Sugar_planks_Pressure_Plate.get(),sugarplanks());
-		pressurePlateWithItem(SLBlocks.Sugar_stone_Pressure_Plate.get(),sugarstone());
-		logBlockWithItem((RotatedPillarBlock) SLBlocks.Stripped_Sugar_Log.get(),
+		torchWithItem(SLBlocks.SUGAR_TORCH.get(), sugartorch());
+		wallTorchBlock(SLBlocks.WALL_SUGAR_TORCH.get(),sugartorch(), sugartorch(), sugartorch(), sugartorch());
+		buttonWithItem(SLBlocks.SUGAR_PLANKS_BUTTON.get(),sugarplanks());
+		buttonWithItem(SLBlocks.SUGAR_STONE_BUTTON.get(),sugarstone());
+		pressurePlateWithItem(SLBlocks.SUGAR_PLANKS_PRESSURE_PLATE.get(),sugarplanks());
+		pressurePlateWithItem(SLBlocks.SUGAR_STONE_PRESSURE_PLATE.get(),sugarstone());
+		logBlockWithItem((RotatedPillarBlock) SLBlocks.STRIPPED_SUGAR_LOG.get(),
 				new ResourceLocation("sugards:block/stripped_sugar_log"),
 				new ResourceLocation("sugards:block/stripped_sugar_log_top"));
-		pillarBlockWithItem(SLBlocks.Sugar_Wood.get(), sugarlog(), sugarlog());
-		pillarBlockWithItem(SLBlocks.Stripped_Sugar_Wood.get(),
+		pillarBlockWithItem(SLBlocks.SUGAR_WOOD.get(), sugarlog(), sugarlog());
+		pillarBlockWithItem(SLBlocks.STRIPPED_SUGAR_WOOD.get(),
 				new ResourceLocation("sugards:block/stripped_sugar_log"),
 				new ResourceLocation("sugards:block/stripped_sugar_log"));
 		/** ほとんどのブロックはアイテムモデル生成もいけそうなのでここを見に来た人の為にやっておく。

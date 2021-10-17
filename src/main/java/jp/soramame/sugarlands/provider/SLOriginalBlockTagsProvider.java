@@ -28,8 +28,8 @@ public class SLOriginalBlockTagsProvider extends TagsProvider<Block> {
 	@Override
 	protected void addTags() {
 		this.tag(SLBlockTags.SUGAR_LOGS)
-			.add(SLBlocks.Sugar_Log.get(),SLBlocks.Stripped_Sugar_Log.get(),
-					SLBlocks.Sugar_Wood.get(),SLBlocks.Stripped_Sugar_Wood.get());
+			.add(SLBlocks.SUGAR_LOG.get(),SLBlocks.STRIPPED_SUGAR_LOG.get(),
+					SLBlocks.SUGAR_WOOD.get(),SLBlocks.STRIPPED_SUGAR_WOOD.get());
 	}
 
 	@Override

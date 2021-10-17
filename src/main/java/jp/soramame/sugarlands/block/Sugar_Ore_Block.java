@@ -15,13 +15,13 @@ public class Sugar_Ore_Block extends OreBlock {
 	}
 
 	protected int xpOnDrop(Random p_220281_1_) {
-		if (this == SLBlocks.Sugar_Diamond_Ore.get()) {
+		if (this == SLBlocks.SUGAR_DIAMOND_ORE.get()) {
 			return MathHelper.nextInt(p_220281_1_, 3, 7);
 		}
-		else if(this == SLBlocks.Sugarrack.get()) {
+		else if(this == SLBlocks.SUGARRACK.get()) {
 			return MathHelper.nextInt(p_220281_1_, 3, 7);
 		}
-		else if(this == SLBlocks.End_Sugar_Stone.get()) {
+		else if(this == SLBlocks.END_SUGAR_STONE.get()) {
 			return MathHelper.nextInt(p_220281_1_, 3, 7);
 		}
 		return 0;

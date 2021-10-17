@@ -3,6 +3,7 @@ package jp.soramame.sugarlands;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import jp.soramame.sugarlands.init.SLBiomes;
 import jp.soramame.sugarlands.init.SLBlockItems;
 import jp.soramame.sugarlands.init.SLBlocks;
 import jp.soramame.sugarlands.init.SLItems;
@@ -15,12 +16,14 @@ import jp.soramame.sugarlands.provider.SLJaJpLanguageProvider;
 import jp.soramame.sugarlands.provider.SLLootTableProvider;
 import jp.soramame.sugarlands.provider.SLOriginalBlockTagsProvider;
 import jp.soramame.sugarlands.provider.SLRecipeProvider;
+import jp.soramame.sugarlands.world.gen.feature.SLWorldGen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -40,6 +43,9 @@ public class SugarLandsCore {
 		SLItems.register(modbus);
 		modbus.addListener(this::registerProviders);
 		modbus.addListener(this::setup);
+		modbus.addListener(this::init);
+		SLBiomes.register(modbus);
+		SLWorldGen.register(modbus);
 	}
 
 	private void registerProviders(GatherDataEvent event) {
@@ -59,16 +65,28 @@ public class SugarLandsCore {
 			gen.addProvider(new SLRecipeProvider(gen));
 		}
 	}
+	//検討中
+	/*public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
+			event.getRegistry().register(new SeedForGrassConverterModifier.Serializer()
+					.setRegistryName(new ResourceLocation(MOD_ID, "azuki")));
+	}*/
 
 	/**透明とかの設定をぶち込む場所*/
-	private void setup(final FMLCommonSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(SLBlocks.Sugar_Candy.get(), RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Calamel_Sauce.get(), RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Sugar_Sapling.get(), RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Sugar_Candy_Pane.get(), RenderType.translucent());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Sugar_Planks_TrapDoor.get(), RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Sugar_Door.get(), RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Wall_Sugar_Torch.get(), RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(SLBlocks.Sugar_Torch.get(), RenderType.cutout());
+	private void setup(FMLCommonSetupEvent event) {
+		RenderTypeLookup.setRenderLayer(SLBlocks.SUGAR_CANDY.get(), RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(SLBlocks.CALAMEL_SAUCE.get(), RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(SLBlocks.SUGAR_SAPLING.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(SLBlocks.SUGAR_CANDY_PANE.get(), RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(SLBlocks.SUGAR_PLANKS_TRAPDOOR.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(SLBlocks.SUGAR_DOOR.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(SLBlocks.WALL_SUGAR_TORCH.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(SLBlocks.SUGAR_TORCH.get(), RenderType.cutout());
+	}
+
+	public void init(FMLClientSetupEvent event) {
+		SLBiomes.addBiome();
+		SLBiomes.addBiomeTypes();
+		/*event.enqueueWork(() ->{ });*/
+		LOGGER.debug("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 	}
 }

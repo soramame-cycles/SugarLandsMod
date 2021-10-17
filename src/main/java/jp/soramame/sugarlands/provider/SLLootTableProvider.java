@@ -45,78 +45,78 @@ public class SLLootTableProvider extends LootTableProvider {
 			return SLBlocks.getEntries().stream().map(RegistryObject::get).collect(Collectors.toList());
 		}
 		protected void addTables() {
-			this.dropSelf(SLBlocks.Sugar_Block.get());
-			this.dropSelf(SLBlocks.Sugar_Stone.get());
-			this.dropSelf(SLBlocks.Sugar_Candy.get());
-			this.add(SLBlocks.Sugar_Diamond_Ore.get(), (sugar_diamond)-> {
+			this.dropSelf(SLBlocks.SUGAR_BLOCK.get());
+			this.dropSelf(SLBlocks.SUGAR_STONE.get());
+			this.dropSelf(SLBlocks.SUGAR_CANDY.get());
+			this.add(SLBlocks.SUGAR_DIAMOND_ORE.get(), (sugar_diamond)-> {
 				return createOreDrop(sugar_diamond, SLItems.Sugar_Diamond_nugget.get());
 			});
-			this.dropSelf(SLBlocks.Sugar_Diamond_Block.get());
-			this.dropSelf(SLBlocks.Sugar_CobbleStone.get());
-			this.dropSelf(SLBlocks.Sugar_Bricks.get());
-			this.dropSelf(SLBlocks.Moist_Sugar_Block.get());
-			this.dropSelf(SLBlocks.Raw_Sugar_Block.get());
-			this.dropSelf(SLBlocks.Lit_Raw_Sugar_Block.get());
-			this.add(SLBlocks.Sugarrack.get(),(sugarrack)->{
+			this.dropSelf(SLBlocks.SUGAR_DIAMOND_BLOCK.get());
+			this.dropSelf(SLBlocks.SUGAR_COBBLESTONE.get());
+			this.dropSelf(SLBlocks.SUGAR_BRICKS.get());
+			this.dropSelf(SLBlocks.MOIST_SUGAR_BLOCK.get());
+			this.dropSelf(SLBlocks.RAW_SUGAR_BLOCK.get());
+			this.dropSelf(SLBlocks.LIT_RAW_SUGAR_BLOCK.get());
+			this.add(SLBlocks.SUGARRACK.get(),(sugarrack)->{
 				return createOreDrop(sugarrack,SLItems.Sugar_Diamond_nugget.get());
 			});
-			this.add(SLBlocks.End_Sugar_Stone.get(),(endsugar)->{
+			this.add(SLBlocks.END_SUGAR_STONE.get(),(endsugar)->{
 				return createOreDrop(endsugar,SLItems.Sugar_Diamond_nugget.get());
 			});
-			this.dropSelf(SLBlocks.Bismuth_Ore.get());
-			this.dropSelf(SLBlocks.Bismuth_Crystal_Block.get());
-			this.dropSelf(SLBlocks.Pudding_Block.get());
-			this.dropSelf(SLBlocks.Calamel_Sauce.get());
-			this.dropSelf(SLBlocks.Cookie_Block.get());
-			this.dropSelf(SLBlocks.Sugar_Pillar.get());
-			this.dropSelf(SLBlocks.Rotten_Flesh_Block.get());
-			this.dropSelf(SLBlocks.Black_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Blue_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Brown_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Cyan_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Gray_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Green_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Light_Blue_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Light_Gray_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Lime_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Magenta_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Orange_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Pink_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Purple_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Red_Ice_Candy.get());
-			this.dropSelf(SLBlocks.White_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Yellow_Ice_Candy.get());
-			this.dropSelf(SLBlocks.Sugar_Log.get());
-			this.add(SLBlocks.Sugar_Leaves.get(), (sugar_leaves)->{
-				return createLeavesDrops(sugar_leaves, SLBlocks.Sugar_Sapling.get(), NORMAL_LEAVES_SAPLING_CHANCES);
+			this.dropSelf(SLBlocks.BISMUTH_ORE.get());
+			this.dropSelf(SLBlocks.BISMUTH_CRYSTAL_BLOCK.get());
+			this.dropSelf(SLBlocks.PUDDING_BLOCK.get());
+			this.dropSelf(SLBlocks.CALAMEL_SAUCE.get());
+			this.dropSelf(SLBlocks.COOKIE_BLOCK.get());
+			this.dropSelf(SLBlocks.SUGAR_PILLAR.get());
+			this.dropSelf(SLBlocks.ROTTEN_FLESH_BLOCK.get());
+			this.dropSelf(SLBlocks.BLACK_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.BLUE_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.BROWN_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.CYAN_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.GRAY_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.GREEN_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.LIGHT_BLUE_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.LIGHT_GRAY_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.LIME_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.MAGENTA_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.ORANGE_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.PINK_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.PURPLE_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.RED_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.WHITE_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.YELLOW_ICE_CANDY.get());
+			this.dropSelf(SLBlocks.SUGAR_LOG.get());
+			this.add(SLBlocks.SUGAR_LEAVES.get(), (sugar_leaves)->{
+				return createLeavesDrops(sugar_leaves, SLBlocks.SUGAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES);
 			});
-			this.dropSelf(SLBlocks.Sugar_Sapling.get());
-			this.dropSelf(SLBlocks.Sugar_Planks.get());
-			this.dropSelf(SLBlocks.Sugar_Planks_Stairs.get());
-			this.dropSelf(SLBlocks.Sugar_Stone_Stairs.get());
-			this.dropSelf(SLBlocks.Sugar_Cobblestone_Stairs.get());
-			this.dropSelf(SLBlocks.Sugar_Log_Stairs.get());
-			this.add(SLBlocks.Sugar_Planks_Slab.get(), BlockLootTables::createSlabItemTable);
-			this.add(SLBlocks.Sugar_Stone_Slab.get(), BlockLootTables::createSlabItemTable);
-			this.add(SLBlocks.Sugar_Cobblestone_Slab.get(), BlockLootTables::createSlabItemTable);
-			this.add(SLBlocks.Sugar_Log_Slab.get(), BlockLootTables::createSlabItemTable);
-			this.dropSelf(SLBlocks.Sugar_Log_Fence.get());
-			this.dropSelf(SLBlocks.Sugar_Planks_Fence.get());
-			this.dropSelf(SLBlocks.Sugar_Stone_Wall.get());
-			this.dropSelf(SLBlocks.Sugar_Cobblestone_Wall.get());
-			this.dropSelf(SLBlocks.Sugar_Bricks_Wall.get());
-			this.dropSelf(SLBlocks.Sugar_Candy_Pane.get());
-			this.dropSelf(SLBlocks.Sugar_Planks_TrapDoor.get());
-			this.add(SLBlocks.Sugar_Door.get(), BlockLootTables::createDoorTable);
-			this.dropSelf(SLBlocks.Sugar_Torch.get());
-			this.dropOther(SLBlocks.Wall_Sugar_Torch.get(), SLBlocks.Sugar_Torch.get());
-			this.dropSelf(SLBlocks.Sugar_Planks_Button.get());
-			this.dropSelf(SLBlocks.Sugar_Stone_Button.get());
-			this.dropSelf(SLBlocks.Sugar_planks_Pressure_Plate.get());
-			this.dropSelf(SLBlocks.Sugar_stone_Pressure_Plate.get());
-			this.dropSelf(SLBlocks.Stripped_Sugar_Log.get());
-			this.dropSelf(SLBlocks.Sugar_Wood.get());
-			this.dropSelf(SLBlocks.Stripped_Sugar_Wood.get());
+			this.dropSelf(SLBlocks.SUGAR_SAPLING.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS_STAIRS.get());
+			this.dropSelf(SLBlocks.SUGAR_STONE_STAIRS.get());
+			this.dropSelf(SLBlocks.SUGAR_COBBLESTONE_STAIRS.get());
+			this.dropSelf(SLBlocks.SUGAR_LOG_STAIRS.get());
+			this.add(SLBlocks.SUGAR_PLANKS_SLAB.get(), BlockLootTables::createSlabItemTable);
+			this.add(SLBlocks.SUGAR_STONE_SLAB.get(), BlockLootTables::createSlabItemTable);
+			this.add(SLBlocks.SUGAR_COBBLESTONE_SLAB.get(), BlockLootTables::createSlabItemTable);
+			this.add(SLBlocks.SUGAR_LOG_SLAB.get(), BlockLootTables::createSlabItemTable);
+			this.dropSelf(SLBlocks.SUGAR_LOG_FENCE.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS_FENCE.get());
+			this.dropSelf(SLBlocks.SUGAR_STONE_WALL.get());
+			this.dropSelf(SLBlocks.SUGAR_COBBLESTONE_WALL.get());
+			this.dropSelf(SLBlocks.SUGAR_BRICKS_WALL.get());
+			this.dropSelf(SLBlocks.SUGAR_CANDY_PANE.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS_TRAPDOOR.get());
+			this.add(SLBlocks.SUGAR_DOOR.get(), BlockLootTables::createDoorTable);
+			this.dropSelf(SLBlocks.SUGAR_TORCH.get());
+			this.dropOther(SLBlocks.WALL_SUGAR_TORCH.get(), SLBlocks.SUGAR_TORCH.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS_BUTTON.get());
+			this.dropSelf(SLBlocks.SUGAR_STONE_BUTTON.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS_PRESSURE_PLATE.get());
+			this.dropSelf(SLBlocks.SUGAR_STONE_PRESSURE_PLATE.get());
+			this.dropSelf(SLBlocks.STRIPPED_SUGAR_LOG.get());
+			this.dropSelf(SLBlocks.SUGAR_WOOD.get());
+			this.dropSelf(SLBlocks.STRIPPED_SUGAR_WOOD.get());
 		}
 	}
 

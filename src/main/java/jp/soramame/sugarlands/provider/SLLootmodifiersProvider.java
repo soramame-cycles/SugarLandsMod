@@ -29,6 +29,9 @@ import net.minecraft.loot.conditions.RandomChance;
 import net.minecraft.loot.functions.ApplyBonus;
 import net.minecraft.util.ResourceLocation;
 
+
+/**あずきのルートテーブル自動生成を試そうとしたが途中で良く分からなくなったため中止
+ * がんばったので消さないでおくあとでやくにたつかもしれない*/
 public class SLLootmodifiersProvider extends LootTableProvider {
 
 	public SLLootmodifiersProvider(DataGenerator p_i50789_1_) {
@@ -47,11 +50,12 @@ public class SLLootmodifiersProvider extends LootTableProvider {
 		}
 		public static final ILootCondition.IBuilder Wheat = BlockStateProperty.hasBlockStateProperties(Blocks.WHEAT);
 
+
 		public static LootTable.Builder createGrassDropsModifier(Block block,Item seedItem) {
 		      return createShearsDispatchTable(block, applyExplosionDecay(block, ItemLootEntry.lootTableItem(seedItem).when(RandomChance.randomChance(0.125F)).apply(ApplyBonus.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))));
 		   }
-		public static LootTable.Builder test(Block block){
-			return LootTable.lootTable().withPool(LootPool.lootPool().when(Wheat)).withPool(LootPool.lootPool());
+		public static LootTable.Builder test(Item seed){
+			return LootTable.lootTable().withPool(LootPool.lootPool().when(Wheat)).withPool(LootPool.lootPool().add(ItemLootEntry.lootTableItem(seed)));
 
 		}
 	}
