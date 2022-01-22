@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sugards:sugar_stone"
+  },
+  "result": "sugards:sugar_stone_button",
+  "count": 1
+}

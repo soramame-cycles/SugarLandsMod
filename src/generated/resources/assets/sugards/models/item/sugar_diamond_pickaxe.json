@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "sugards:item/sugar_diamond_pickaxe"
+  }
+}

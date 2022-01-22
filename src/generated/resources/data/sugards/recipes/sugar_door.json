@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "sugards:sugar_planks"
+    }
+  },
+  "result": {
+    "item": "sugards:sugar_door",
+    "count": 3
+  }
+}

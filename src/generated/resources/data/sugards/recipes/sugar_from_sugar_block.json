@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "sugar",
   "ingredients": [
     {
       "item": "sugards:sugar_block"

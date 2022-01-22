@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sugards:sugar_diamond"
+  },
+  "result": "sugards:sugar_diamond_ore",
+  "experience": 1.0,
+  "cookingtime": 200
+}

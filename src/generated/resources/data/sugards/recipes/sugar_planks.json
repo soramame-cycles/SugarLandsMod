@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "minecraft:sugar_logs"
+    }
+  ],
+  "result": {
+    "item": "sugards:sugar_planks",
+    "count": 4
+  }
+}

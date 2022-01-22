@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sugards:sugar_planks"
+  },
+  "result": "sugards:sugar_planks_slab",
+  "count": 2
+}

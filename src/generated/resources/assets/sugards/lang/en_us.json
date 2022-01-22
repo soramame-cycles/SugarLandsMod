@@ -1,5 +1,8 @@
 {
-  "biome.sugards.sugar_desert": "sugar_desert",
+  "biome.sugards.icecandy_spikes": "IceCandy Spikes",
+  "biome.sugards.pudding_plain": "Pudding Plain",
+  "biome.sugards.sugar_desert": "Sugar Desert",
+  "biome.sugards.sugar_forest": "Sugar Forest",
   "block.sugards.bismuth_crystal_block": "Bismuth Crystal Block",
   "block.sugards.bismuth_ore": "Bismuth Ore",
   "block.sugards.black_ice_candy": "Black Icecandy",
@@ -63,7 +66,9 @@
   "block.sugards.sugarrack": "Sugarrack",
   "block.sugards.white_ice_candy": "White Icecandy",
   "block.sugards.yellow_ice_candy": "Yellow Icecandy",
+  "item.sugards.bismuth_pickaxe": "Bismuth Pickaxe",
   "item.sugards.sugar_diamond": "Sugar Diamond",
   "item.sugards.sugar_diamond_nugget": "Sugar Diamond Nugget",
+  "item.sugards.sugar_diamond_pickaxe": "Sugar Diamond Pickaxe",
   "itemGroup.sugards": "SugarLands"
 }

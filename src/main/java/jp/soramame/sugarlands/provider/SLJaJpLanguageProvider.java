@@ -1,8 +1,11 @@
 package jp.soramame.sugarlands.provider;
 
+import jp.soramame.sugarlands.init.SLBiomes;
 import jp.soramame.sugarlands.init.SLBlocks;
 import jp.soramame.sugarlands.init.SLItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.util.Util;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class SLJaJpLanguageProvider extends LanguageProvider {
@@ -80,8 +83,23 @@ public class SLJaJpLanguageProvider extends LanguageProvider {
 		this.add(SLBlocks.STRIPPED_SUGAR_LOG.get(),"樹皮を剥いだ砂糖原木");
 		this.add(SLBlocks.SUGAR_WOOD.get(),"砂糖の木");
 		this.add(SLBlocks.STRIPPED_SUGAR_WOOD.get(),"樹皮を剥いだ砂糖の木");
-		this.add("biome.sugards.sugar_desert", "砂糖砂漠");
+		this.add(SLBiomes.SUGAR_DESERT_REGISTRY.get(), "砂糖砂漠");
+		this.add(SLBiomes.PUDDING_PLAIN_REGISTRY.get(), "プリン平原");
+		this.add(SLBiomes.SUGAR_FOREST_REGISTRY.get(), "砂糖の森林");
+		this.add(SLBiomes.ICECANDY_SPIKES_REGISTRY.get(), "樹氷菓");
+		this.add(SLItems.Sugar_Diamond_Pickaxe.get(), "砂糖ダイヤのツルハシ");
+		this.add(SLItems.Bismuth_Pickaxe.get(), "ビスマスのツルハシ");
+		this.add(SLItems.Crushed_Sugar_Cane.get(), "砕いたサトウキビ");
+		this.add(SLItems.Poppy_Seed.get(), "ポピーシード");
+		this.add(SLItems.Pudding.get(), "プリン");
+		this.add(SLItems.Raw_sugar.get(), "黒糖");
+		this.add(SLItems.Bismuth_Crystal.get(), "ビスマス骸晶");
+		add(SLBlocks.SUGAR_PLANKS_FENCE_GATE.get(), "砂糖板材のフェンスゲート");
+		add(SLBlocks.SUGAR_LOG_FENCE_GATE.get(), "砂糖原木のフェンスゲート");
+	}
 
+	private void add(Biome biome, String name) {
+		add(Util.makeDescriptionId("biome",biome.getRegistryName()),name);
 	}
 
 }

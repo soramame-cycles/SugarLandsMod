@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "sugards:sugar_cobblestone"
+    }
+  },
+  "result": {
+    "item": "sugards:sugar_cobblestone_slab",
+    "count": 6
+  }
+}

@@ -9,4 +9,5 @@ public class SLFoods {
 	public static final Food Azuki_Paste_Bun = (new Food.Builder().nutrition(8).saturationMod(0.6F)
 			.effect(()-> new EffectInstance(Effects.DIG_SPEED, 6000,0), 1).build());
 	//		.effect(()-> new EffectInstance(効果, 何tick続くか,ポーションのレベル"0=1"), 確率"max=1.0F").build());
+	public static final Food Pudding = (new Food.Builder()).nutrition(6).saturationMod(0.5F).build();
 }

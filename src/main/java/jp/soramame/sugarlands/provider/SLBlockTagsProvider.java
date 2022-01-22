@@ -1,7 +1,6 @@
 package jp.soramame.sugarlands.provider;
 
 import jp.soramame.sugarlands.init.SLBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.BlockTags;
@@ -23,12 +22,9 @@ public class SLBlockTagsProvider extends BlockTagsProvider {
 		this.tag(BlockTags.INFINIBURN_END).add(SLBlocks.SUGARRACK.get());
 		this.tag(BlockTags.DRAGON_IMMUNE).add(SLBlocks.END_SUGAR_STONE.get(),SLBlocks.SUGAR_DIAMOND_BLOCK.get());
 		this.tag(BlockTags.SAPLINGS).add(SLBlocks.SUGAR_SAPLING.get());
-		this.tag(BlockTags.WOODEN_FENCES).add(new Block[] {
-				SLBlocks.SUGAR_LOG_FENCE.get(),SLBlocks.SUGAR_PLANKS_FENCE.get()
-		});
-		this.tag(BlockTags.WALLS).add(new Block[] {
-				SLBlocks.SUGAR_BRICKS_WALL.get(),SLBlocks.SUGAR_COBBLESTONE_WALL.get(),SLBlocks.SUGAR_STONE_WALL.get()
-		});
+		this.tag(BlockTags.WOODEN_FENCES).add(SLBlocks.SUGAR_LOG_FENCE.get(),SLBlocks.SUGAR_PLANKS_FENCE.get());
+		this.tag(BlockTags.WALLS).add(SLBlocks.SUGAR_BRICKS_WALL.get(),SLBlocks.SUGAR_COBBLESTONE_WALL.get(),SLBlocks.SUGAR_STONE_WALL.get());
+		this.tag(BlockTags.FENCE_GATES).add(SLBlocks.SUGAR_PLANKS_FENCE_GATE.get(),SLBlocks.SUGAR_LOG_FENCE_GATE.get());
 	}
 
 }

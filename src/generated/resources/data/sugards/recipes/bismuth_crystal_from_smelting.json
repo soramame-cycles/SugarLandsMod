@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sugards:bismuth_ore"
+  },
+  "result": "sugards:bismuth_crystal",
+  "experience": 1.0,
+  "cookingtime": 200
+}

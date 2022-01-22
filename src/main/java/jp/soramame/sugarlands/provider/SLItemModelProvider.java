@@ -25,6 +25,12 @@ public class SLItemModelProvider extends ItemModelProvider {
 		simpleItem(SLItems.Azuki_Been.get());
 		simpleItem(SLItems.Azuki_Paste.get());
 		simpleItem(SLItems.Azuki_Paste_Bun.get());
+		toolItem(SLItems.Bismuth_Pickaxe.get());
+		toolItem(SLItems.Sugar_Diamond_Pickaxe.get());
+		simpleItem(SLItems.Crushed_Sugar_Cane.get());
+		simpleItem(SLItems.Poppy_Seed.get());
+		simpleItem(SLItems.Pudding.get());
+		simpleItem(SLItems.Raw_sugar.get());
 	}
 
 	public void simpleItem(Item item) {

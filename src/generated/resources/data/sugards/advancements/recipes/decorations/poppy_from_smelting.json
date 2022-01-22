@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "sugards:poppy_from_smelting"
+    ]
+  },
+  "criteria": {
+    "has_poppy_seed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:poppy_seed"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "sugards:poppy_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_poppy_seed",
+      "has_the_recipe"
+    ]
+  ]
+}

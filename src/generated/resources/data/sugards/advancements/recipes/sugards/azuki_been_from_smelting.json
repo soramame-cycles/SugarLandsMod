@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "sugards:azuki_been_from_smelting"
+    ]
+  },
+  "criteria": {
+    "has_sugar_leaves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:sugar_leaves"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "sugards:azuki_been_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_leaves",
+      "has_the_recipe"
+    ]
+  ]
+}

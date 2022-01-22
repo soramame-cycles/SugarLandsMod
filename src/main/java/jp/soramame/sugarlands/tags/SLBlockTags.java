@@ -13,19 +13,19 @@ import net.minecraft.util.ResourceLocation;
 
 public class SLBlockTags {
 
-	protected static final TagRegistry<Block> HELPER = TagRegistryManager.create(new ResourceLocation("sugards"), ITagCollectionSupplier::getBlocks);
+	protected static final TagRegistry<Block> HELPER = TagRegistryManager.create(new ResourceLocation("sugards:block"), ITagCollectionSupplier::getBlocks);
 	public static final INamedTag<Block> SUGAR_LOGS = bind("sugar_logs");
 
 	public static ITag.INamedTag<Block> bind(String p_199894_0_) {
 		return HELPER.bind(p_199894_0_);
 	}
 	public static net.minecraftforge.common.Tags.IOptionalNamedTag<Block> createOptional(ResourceLocation name) {
-		return createOptional(new ResourceLocation("sugards"), null);
+		return createOptional(new ResourceLocation("sugards:block"), null);
 	}
 
 	public static net.minecraftforge.common.Tags.IOptionalNamedTag<Block> createOptional(ResourceLocation name, @javax.annotation.Nullable java.util.Set<java.util.function.Supplier<Block>> defaults) {
-		return HELPER.createOptional(new ResourceLocation("sugards"), defaults);
-		}
+		return HELPER.createOptional(new ResourceLocation("sugards:block"), defaults);
+	}
 
 	public static ITagCollection<Block> getAllTags() {
 		return HELPER.getAllTags();

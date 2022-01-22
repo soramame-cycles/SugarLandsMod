@@ -13,6 +13,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.PressurePlateBlock.Sensitivity;
@@ -61,7 +62,7 @@ public class SLBlocks {
 					.strength(2.0F, 100.0F)
 					.harvestLevel(-1)
 					.harvestTool(ToolType.PICKAXE)
-					.lightLevel((lightlevel)->{return 15;})
+					.lightLevel((lightlevel)->15)
 					));
 	public static final RegistryObject<Block> SUGAR_BLOCK =
 			BLOCKS.register("sugar_block",() -> new Sugar_Block(MOIST_SUGAR_BLOCK.get(),AbstractBlock.Properties.of(Material.SAND,DyeColor.WHITE)
@@ -144,7 +145,7 @@ public class SLBlocks {
 					.strength(2.0F,10.0F)
 					.harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE)
-					.lightLevel((bismuthflash) -> {return 15;})
+					.lightLevel((bismuthflash) -> 15)
 					));
 	public static final RegistryObject<Block> PUDDING_BLOCK =
 			BLOCKS.register("pudding_block", ()-> new Block(AbstractBlock.Properties.of(Material.STONE)
@@ -181,7 +182,7 @@ public class SLBlocks {
 					.harvestLevel(0)
 					.harvestTool(ToolType.PICKAXE)
 					.sound(SoundType.SLIME_BLOCK)
-					.lightLevel((dirtylight) -> {return 3;})
+					.lightLevel((dirtylight) -> 3)
 					));
 	public static final RegistryObject<Block> BLACK_ICE_CANDY =
 			BLOCKS.register("black_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.BLACK)
@@ -331,9 +332,9 @@ public class SLBlocks {
 	private static MaterialColor top;
 	private static MaterialColor side;
 	public static final RegistryObject<Block> SUGAR_LOG =
-			BLOCKS.register("sugar_log", ()-> new SLLogs(AbstractBlock.Properties.of(Material.WOOD, (XZorY) -> {
-							return XZorY.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? top : side;
-							}).strength(2.0F).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.AXE), MaterialColor.QUARTZ, MaterialColor.QUARTZ));
+			BLOCKS.register("sugar_log", ()-> new SLLogs(AbstractBlock.Properties.of(Material.WOOD,
+					(XZorY) -> XZorY.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? top : side)
+					.strength(2.0F).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.AXE), MaterialColor.QUARTZ, MaterialColor.QUARTZ));
 	public static final RegistryObject<Block> SUGAR_LEAVES =
 			BLOCKS.register("sugar_leaves", ()-> leaves());
 	public static final RegistryObject<Block> SUGAR_SAPLING =
@@ -501,7 +502,22 @@ public class SLBlocks {
 					.harvestLevel(0)
 					.harvestTool(ToolType.AXE)
 					));
-
+	public static final RegistryObject<Block> SUGAR_PLANKS_FENCE_GATE =
+			BLOCKS.register("sugar_planks_fence_gate", ()-> new FenceGateBlock(AbstractBlock.Properties.of(Material.WOOD)
+					.strength(0.5F)
+					.harvestLevel(-1)
+					.harvestTool(ToolType.AXE)
+					.sound(SoundType.WOOD)
+					.noOcclusion()
+					));
+	public static final RegistryObject<Block> SUGAR_LOG_FENCE_GATE =
+			BLOCKS.register("sugar_log_fence_gate", ()-> new FenceGateBlock(AbstractBlock.Properties.of(Material.WOOD)
+					.strength(0.5F)
+					.harvestLevel(-1)
+					.harvestTool(ToolType.AXE)
+					.sound(SoundType.WOOD)
+					.noOcclusion()
+					));
 
 
 	public static void register(IEventBus event) {

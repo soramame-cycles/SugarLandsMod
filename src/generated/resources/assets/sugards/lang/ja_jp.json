@@ -1,5 +1,8 @@
 {
+  "biome.sugards.icecandy_spikes": "\u6A39\u6C37\u83D3",
+  "biome.sugards.pudding_plain": "\u30D7\u30EA\u30F3\u5E73\u539F",
   "biome.sugards.sugar_desert": "\u7802\u7CD6\u7802\u6F20",
+  "biome.sugards.sugar_forest": "\u7802\u7CD6\u306E\u68EE\u6797",
   "block.sugards.bismuth_crystal_block": "\u30D3\u30B9\u30DE\u30B9\u9AB8\u6676\u30D6\u30ED\u30C3\u30AF",
   "block.sugards.bismuth_ore": "\u30D3\u30B9\u30DE\u30B9\u9271\u77F3",
   "block.sugards.black_ice_candy": "\u9ED2\u8272\u306E\u30A2\u30A4\u30B9",
@@ -63,7 +66,9 @@
   "block.sugards.sugarrack": "\u30B7\u30E5\u30AC\u30FC\u30E9\u30C3\u30AF",
   "block.sugards.white_ice_candy": "\u767D\u306E\u30A2\u30A4\u30B9",
   "block.sugards.yellow_ice_candy": "\u9EC4\u8272\u306E\u30A2\u30A4\u30B9",
+  "item.sugards.bismuth_pickaxe": "\u30D3\u30B9\u30DE\u30B9\u306E\u30C4\u30EB\u30CF\u30B7",
   "item.sugards.sugar_diamond": "\u7802\u7CD6\u30C0\u30A4\u30E4",
   "item.sugards.sugar_diamond_nugget": "\u7802\u7CD6\u30C0\u30A4\u30E4\u306E\u6B20\u7247",
+  "item.sugards.sugar_diamond_pickaxe": "\u7802\u7CD6\u30C0\u30A4\u30E4\u306E\u30C4\u30EB\u30CF\u30B7",
   "itemGroup.sugards": "\u30B7\u30E5\u30AC\u30FC\u30E9\u30F3\u30C9"
 }

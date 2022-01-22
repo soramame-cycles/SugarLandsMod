@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "sugards:stripped_sugar_log"
+    }
+  },
+  "result": {
+    "item": "sugards:stripped_sugar_wood",
+    "count": 3
+  }
+}

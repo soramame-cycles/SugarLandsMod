@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "sugards:sugar_diamond_from_smelting"
+      "sugards:sugar_planks_fence"
     ]
   },
   "criteria": {
-    "has_sugar_candy": {
+    "has_planks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "sugards:sugar_candy"
+            "item": "sugards:sugar_planks"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "sugards:sugar_diamond_from_smelting"
+        "recipe": "sugards:sugar_planks_fence"
       }
     }
   },
   "requirements": [
     [
-      "has_sugar_candy",
+      "has_planks",
       "has_the_recipe"
     ]
   ]

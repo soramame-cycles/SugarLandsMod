@@ -10,6 +10,7 @@ import net.minecraft.block.AbstractButtonBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.PaneBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.RotatedPillarBlock;
@@ -121,6 +122,8 @@ public class SLBlockStateProvider extends BlockStateProvider {
 		pillarBlockWithItem(SLBlocks.STRIPPED_SUGAR_WOOD.get(),
 				new ResourceLocation("sugards:block/stripped_sugar_log"),
 				new ResourceLocation("sugards:block/stripped_sugar_log"));
+		fenceGateBlockWithItem((FenceGateBlock)SLBlocks.SUGAR_PLANKS_FENCE_GATE.get(), sugarplanks());
+		fenceGateBlockWithItem((FenceGateBlock)SLBlocks.SUGAR_LOG_FENCE_GATE.get(), sugarlog());
 		/** ほとんどのブロックはアイテムモデル生成もいけそうなのでここを見に来た人の為にやっておく。
 		 * 参考になるかわからんが
 		 * ボタン…は改良の余地あり*/
@@ -140,6 +143,12 @@ public class SLBlockStateProvider extends BlockStateProvider {
 		fenceBlock(block, rl);
 		fenceInventory(block,rl);
 		simpleBlockItem(block, fenceInventory(block,rl));
+	}
+	public void fenceGateBlockWithItem(FenceGateBlock block,ResourceLocation rl) {
+		fenceGateBlock(block, rl);
+		fencegateInventry(block, rl);
+		simpleBlockItem(block,fencegateInventry(block, rl));
+
 	}
 	public void slabBlockWithItem(SlabBlock block, ResourceLocation doubleslab, ResourceLocation texture) {
 		slabBlock(block, doubleslab, texture);
@@ -167,7 +176,7 @@ public class SLBlockStateProvider extends BlockStateProvider {
 		trapdoorBlock(block, rl, orientable);
 		if(orientable == false) {
 			simpleBlockItem(block,trapdoor(block,rl));
-		}else {
+		}else{
 			simpleBlockItem(block,trapdoorOrientable(block,rl));
 		}
 	}
@@ -361,6 +370,9 @@ public class SLBlockStateProvider extends BlockStateProvider {
 	public ModelFile fenceInventory(Block block,ResourceLocation base) {
 		return models().fenceInventory(baseName(block)+"_inventory",base);
 	}
+	public ModelFile fencegateInventry(Block block,ResourceLocation base) {
+		return models().fenceGate(baseName(block), base);
+	}
 	public ModelFile slab(Block block,ResourceLocation rl) {
 		return models().slab(baseName(block), rl, rl, rl);
 	}
@@ -410,22 +422,22 @@ public class SLBlockStateProvider extends BlockStateProvider {
 	}
 
 	//いちいち一回入力するのが面倒なので作業省略
-	public ResourceLocation sugarplanks() {
+	private ResourceLocation sugarplanks() {
 		return new ResourceLocation("sugards:block/sugar_planks");
 	}
-	public ResourceLocation sugarstone() {
+	private ResourceLocation sugarstone() {
 		return new ResourceLocation("sugards:block/sugar_stone");
 	}
-	public ResourceLocation sugarcobble() {
+	private ResourceLocation sugarcobble() {
 		return new ResourceLocation("sugards:block/sugar_cobblestone");
 	}
-	public ResourceLocation sugarlog() {
+	private ResourceLocation sugarlog() {
 		return new ResourceLocation("sugards:block/sugar_log");
 	}
-	public ResourceLocation sugartorch() {
+	private ResourceLocation sugartorch() {
 		return new ResourceLocation("sugards:block/sugar_torch");
 	}
-	public String baseName(Block block) {
+	private String baseName(Block block) {
 		return block.getRegistryName().toString();
 	}
 }

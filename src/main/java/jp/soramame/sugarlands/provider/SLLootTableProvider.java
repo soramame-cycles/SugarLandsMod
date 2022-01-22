@@ -33,12 +33,9 @@ public class SLLootTableProvider extends LootTableProvider {
 
 	protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> getTables(){
 		return ImmutableList.of(Pair.of(SLBlockLootTables::new, LootParameterSets.BLOCK));
-
 	}
 
-	protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {
-
-	}
+	protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {	}
 
 	private static class SLBlockLootTables extends BlockLootTables{
 		protected Iterable<Block> getKnownBlocks(){
@@ -48,21 +45,18 @@ public class SLLootTableProvider extends LootTableProvider {
 			this.dropSelf(SLBlocks.SUGAR_BLOCK.get());
 			this.dropSelf(SLBlocks.SUGAR_STONE.get());
 			this.dropSelf(SLBlocks.SUGAR_CANDY.get());
-			this.add(SLBlocks.SUGAR_DIAMOND_ORE.get(), (sugar_diamond)-> {
-				return createOreDrop(sugar_diamond, SLItems.Sugar_Diamond_nugget.get());
-			});
+			this.add(SLBlocks.SUGAR_DIAMOND_ORE.get(),
+					sugar_diamond->createOreDrop(sugar_diamond, SLItems.Sugar_Diamond_nugget.get()));
 			this.dropSelf(SLBlocks.SUGAR_DIAMOND_BLOCK.get());
 			this.dropSelf(SLBlocks.SUGAR_COBBLESTONE.get());
 			this.dropSelf(SLBlocks.SUGAR_BRICKS.get());
 			this.dropSelf(SLBlocks.MOIST_SUGAR_BLOCK.get());
 			this.dropSelf(SLBlocks.RAW_SUGAR_BLOCK.get());
 			this.dropSelf(SLBlocks.LIT_RAW_SUGAR_BLOCK.get());
-			this.add(SLBlocks.SUGARRACK.get(),(sugarrack)->{
-				return createOreDrop(sugarrack,SLItems.Sugar_Diamond_nugget.get());
-			});
-			this.add(SLBlocks.END_SUGAR_STONE.get(),(endsugar)->{
-				return createOreDrop(endsugar,SLItems.Sugar_Diamond_nugget.get());
-			});
+			this.add(SLBlocks.SUGARRACK.get(),
+					sugarrack->createOreDrop(sugarrack,SLItems.Sugar_Diamond_nugget.get()));
+			this.add(SLBlocks.END_SUGAR_STONE.get(),
+					endsugar->createOreDrop(endsugar,SLItems.Sugar_Diamond_nugget.get()));
 			this.dropSelf(SLBlocks.BISMUTH_ORE.get());
 			this.dropSelf(SLBlocks.BISMUTH_CRYSTAL_BLOCK.get());
 			this.dropSelf(SLBlocks.PUDDING_BLOCK.get());
@@ -87,9 +81,8 @@ public class SLLootTableProvider extends LootTableProvider {
 			this.dropSelf(SLBlocks.WHITE_ICE_CANDY.get());
 			this.dropSelf(SLBlocks.YELLOW_ICE_CANDY.get());
 			this.dropSelf(SLBlocks.SUGAR_LOG.get());
-			this.add(SLBlocks.SUGAR_LEAVES.get(), (sugar_leaves)->{
-				return createLeavesDrops(sugar_leaves, SLBlocks.SUGAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES);
-			});
+			this.add(SLBlocks.SUGAR_LEAVES.get(), sugar_leaves->
+				createLeavesDrops(sugar_leaves, SLBlocks.SUGAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 			this.dropSelf(SLBlocks.SUGAR_SAPLING.get());
 			this.dropSelf(SLBlocks.SUGAR_PLANKS.get());
 			this.dropSelf(SLBlocks.SUGAR_PLANKS_STAIRS.get());
@@ -117,6 +110,9 @@ public class SLLootTableProvider extends LootTableProvider {
 			this.dropSelf(SLBlocks.STRIPPED_SUGAR_LOG.get());
 			this.dropSelf(SLBlocks.SUGAR_WOOD.get());
 			this.dropSelf(SLBlocks.STRIPPED_SUGAR_WOOD.get());
+			this.dropSelf(SLBlocks.SUGAR_PLANKS_FENCE_GATE.get());
+			this.dropSelf(SLBlocks.SUGAR_LOG_FENCE_GATE.get());
+
 		}
 	}
 

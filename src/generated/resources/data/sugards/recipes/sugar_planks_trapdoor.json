@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "sugards:sugar_planks"
+    }
+  },
+  "result": {
+    "item": "sugards:sugar_planks_trapdoor",
+    "count": 2
+  }
+}

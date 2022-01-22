@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sugards:poppy_seed"
+  },
+  "result": "minecraft:poppy",
+  "experience": 0.1,
+  "cookingtime": 100
+}

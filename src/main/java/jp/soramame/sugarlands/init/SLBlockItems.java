@@ -251,15 +251,15 @@ public class SLBlockItems {
 			ITEMS.register("sugar_stone_button",
 					()-> new BlockItem(SLBlocks.SUGAR_STONE_BUTTON.get(),
 							new Item.Properties().tab(satou)));
-	public static final RegistryObject<Item> Sugar_planks_Pressure_Plate =
+	public static final RegistryObject<Item> SUGAR_PLANKS_PRESSURE_PLATE =
 			ITEMS.register("sugar_planks_pressure_plate",
 					()-> new BlockItem(SLBlocks.SUGAR_PLANKS_PRESSURE_PLATE.get(),
 							new Item.Properties().tab(satou)));
-	public static final RegistryObject<Item> Sugar_stone_Pressure_Plate =
+	public static final RegistryObject<Item> SUGAR_STONE_PRESSURE_PLATE =
 			ITEMS.register("sugar_stone_pressure_plate",
 					()-> new BlockItem(SLBlocks.SUGAR_STONE_PRESSURE_PLATE.get(),
 							new Item.Properties().tab(satou)));
-	public static final RegistryObject<Item> Stripped_Sugar_Log =
+	public static final RegistryObject<Item> STRIPPED_SUGAR_LOG =
 			ITEMS.register("stripped_sugar_log",
 					()-> new BlockItem(SLBlocks.STRIPPED_SUGAR_LOG.get(),
 							new Item.Properties().tab(satou)));
@@ -267,9 +267,17 @@ public class SLBlockItems {
 			ITEMS.register("sugar_wood",
 					()-> new BlockItem(SLBlocks.SUGAR_WOOD.get(),
 							new Item.Properties().tab(satou)));
-	public static final RegistryObject<Item> Stripped_Sugar_Wood =
+	public static final RegistryObject<Item> STRIPPED_SUGAR_WOOD =
 			ITEMS.register("stripped_sugar_wood",
 					()-> new BlockItem(SLBlocks.STRIPPED_SUGAR_WOOD.get(),
+							new Item.Properties().tab(satou)));
+	public static final RegistryObject<Item> SUGAR_PLANKS_FENCE_GATE =
+			ITEMS.register("sugar_planks_fence_gate",
+					()-> new BlockItem(SLBlocks.SUGAR_PLANKS_FENCE_GATE.get(),
+							new Item.Properties().tab(satou)));
+	public static final RegistryObject<Item> SUGAR_LOG_FENCE_GATE =
+			ITEMS.register("sugar_log_fence_gate",
+					()-> new BlockItem(SLBlocks.SUGAR_LOG_FENCE_GATE.get(),
 							new Item.Properties().tab(satou)));
 
 

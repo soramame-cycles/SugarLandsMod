@@ -3,6 +3,8 @@ package jp.soramame.sugarlands;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import jp.soramame.sugarlands.config.SugarLandsConfigs;
+import jp.soramame.sugarlands.gui.SLConfigGui;
 import jp.soramame.sugarlands.init.SLBiomes;
 import jp.soramame.sugarlands.init.SLBlockItems;
 import jp.soramame.sugarlands.init.SLBlocks;
@@ -15,14 +17,22 @@ import jp.soramame.sugarlands.provider.SLItemModelProvider;
 import jp.soramame.sugarlands.provider.SLJaJpLanguageProvider;
 import jp.soramame.sugarlands.provider.SLLootTableProvider;
 import jp.soramame.sugarlands.provider.SLOriginalBlockTagsProvider;
+import jp.soramame.sugarlands.provider.SLOriginalItemTagsProvider;
 import jp.soramame.sugarlands.provider.SLRecipeProvider;
 import jp.soramame.sugarlands.world.gen.feature.SLWorldGen;
+import jp.soramame.sugarlands.world.gen.ores.SLOreGeneration;
+import jp.soramame.sugarlands.world.gen.surfacebuilders.SLSurfaceBuilders;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ItemGroup;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ExtensionPoint;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig.Type;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
@@ -38,14 +48,20 @@ public class SugarLandsCore {
 
 	public SugarLandsCore() {
 		IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
+		ModLoadingContext modLoadingContext = ModLoadingContext.get();
 		SLBlocks.register(modbus);
 		SLBlockItems.register(modbus);
 		SLItems.register(modbus);
 		modbus.addListener(this::registerProviders);
 		modbus.addListener(this::setup);
 		modbus.addListener(this::init);
+		SLSurfaceBuilders.register(modbus);
 		SLBiomes.register(modbus);
 		SLWorldGen.register(modbus);
+
+		setting(modLoadingContext);
+
+		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH,SLOreGeneration::generateOres);
 	}
 
 	private void registerProviders(GatherDataEvent event) {
@@ -59,6 +75,7 @@ public class SugarLandsCore {
 			gen.addProvider(new SLJaJpLanguageProvider(gen,MOD_ID));
 			gen.addProvider(new SLBlockTagsProvider(gen, MOD_ID,event.getExistingFileHelper()));
 			gen.addProvider(new SLOriginalBlockTagsProvider(gen,MOD_ID,event.getExistingFileHelper()));
+			gen.addProvider(new SLOriginalItemTagsProvider(gen,MOD_ID,event.getExistingFileHelper()));
 		}
 		if(event.includeServer()) {
 			gen.addProvider(new SLLootTableProvider(gen));
@@ -87,6 +104,9 @@ public class SugarLandsCore {
 		SLBiomes.addBiome();
 		SLBiomes.addBiomeTypes();
 		/*event.enqueueWork(() ->{ });*/
-		LOGGER.debug("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+	}
+	public void setting(ModLoadingContext event) {
+		event.registerConfig(Type.COMMON, SugarLandsConfigs.SPEC);
+		event.registerExtensionPoint(ExtensionPoint.CONFIGGUIFACTORY,()->(minecraft,screen)->new SLConfigGui(screen));
 	}
 }
