@@ -9,11 +9,14 @@ import jp.soramame.sugarlands.init.SLBiomes;
 import jp.soramame.sugarlands.init.SLBlockItems;
 import jp.soramame.sugarlands.init.SLBlocks;
 import jp.soramame.sugarlands.init.SLItems;
+import jp.soramame.sugarlands.init.SLLootModifiers;
 import jp.soramame.sugarlands.init.SugardsTab;
+import jp.soramame.sugarlands.provider.SLAdvancementProvider;
 import jp.soramame.sugarlands.provider.SLBlockStateProvider;
 import jp.soramame.sugarlands.provider.SLBlockTagsProvider;
 import jp.soramame.sugarlands.provider.SLEnUsLanguageProvider;
 import jp.soramame.sugarlands.provider.SLItemModelProvider;
+import jp.soramame.sugarlands.provider.SLItemTagProvider;
 import jp.soramame.sugarlands.provider.SLJaJpLanguageProvider;
 import jp.soramame.sugarlands.provider.SLLootTableProvider;
 import jp.soramame.sugarlands.provider.SLOriginalBlockTagsProvider;
@@ -24,6 +27,7 @@ import jp.soramame.sugarlands.world.gen.ores.SLOreGeneration;
 import jp.soramame.sugarlands.world.gen.surfacebuilders.SLSurfaceBuilders;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
@@ -58,10 +62,10 @@ public class SugarLandsCore {
 		SLSurfaceBuilders.register(modbus);
 		SLBiomes.register(modbus);
 		SLWorldGen.register(modbus);
+		SLLootModifiers.register(modbus);
 
 		setting(modLoadingContext);
-
-		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH,SLOreGeneration::generateOres);
+		forgeEventBus();
 	}
 
 	private void registerProviders(GatherDataEvent event) {
@@ -69,17 +73,20 @@ public class SugarLandsCore {
 		 * runDataを実行したらうまくいったなぜだったかは知らん*/
 		DataGenerator gen = event.getGenerator();
 		if (event.includeClient()) {
+			BlockTagsProvider block = new SLBlockTagsProvider(gen, MOD_ID,event.getExistingFileHelper());
 			gen.addProvider(new SLBlockStateProvider(gen,MOD_ID,event.getExistingFileHelper()));
 			gen.addProvider(new SLItemModelProvider(gen,MOD_ID,event.getExistingFileHelper()));
 			gen.addProvider(new SLEnUsLanguageProvider(gen,MOD_ID));
 			gen.addProvider(new SLJaJpLanguageProvider(gen,MOD_ID));
-			gen.addProvider(new SLBlockTagsProvider(gen, MOD_ID,event.getExistingFileHelper()));
+			gen.addProvider(block);
+			gen.addProvider(new SLItemTagProvider(gen,block,MOD_ID,event.getExistingFileHelper()));
 			gen.addProvider(new SLOriginalBlockTagsProvider(gen,MOD_ID,event.getExistingFileHelper()));
 			gen.addProvider(new SLOriginalItemTagsProvider(gen,MOD_ID,event.getExistingFileHelper()));
 		}
 		if(event.includeServer()) {
 			gen.addProvider(new SLLootTableProvider(gen));
 			gen.addProvider(new SLRecipeProvider(gen));
+			gen.addProvider(new SLAdvancementProvider(gen));
 		}
 	}
 	//検討中
@@ -108,5 +115,9 @@ public class SugarLandsCore {
 	public void setting(ModLoadingContext event) {
 		event.registerConfig(Type.COMMON, SugarLandsConfigs.SPEC);
 		event.registerExtensionPoint(ExtensionPoint.CONFIGGUIFACTORY,()->(minecraft,screen)->new SLConfigGui(screen));
+	}
+	public void forgeEventBus() {
+		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH,SLOreGeneration::generateOres);
+
 	}
 }

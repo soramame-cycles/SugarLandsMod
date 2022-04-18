@@ -1,0 +1,69 @@
+{
+  "parent": "sugards:sugar/visit_sugar_desert",
+  "display": {
+    "icon": {
+      "item": "sugards:sugar_diamond_block"
+    },
+    "title": {
+      "translate": "advancements.sugards.sugar.sweet_adventure.title"
+    },
+    "description": {
+      "translate": "advancements.sugards.sugar.sweet_adventure.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "criteria": {
+    "visit_sugards_sugar_desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "sugards:sugar_desert"
+        }
+      }
+    },
+    "visit_sugards_sugar_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "sugards:sugar_forest"
+        }
+      }
+    },
+    "visit_sugards_pudding_plain": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "sugards:pudding_plain"
+        }
+      }
+    },
+    "visit_sugards_icecandy_spikes": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "sugards:icecandy_spikes"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visit_sugards_sugar_desert"
+    ],
+    [
+      "visit_sugards_sugar_forest"
+    ],
+    [
+      "visit_sugards_pudding_plain"
+    ],
+    [
+      "visit_sugards_icecandy_spikes"
+    ]
+  ]
+}

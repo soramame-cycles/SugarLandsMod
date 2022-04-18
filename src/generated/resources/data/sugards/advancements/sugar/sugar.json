@@ -1,0 +1,35 @@
+{
+  "parent": "sugards:sugar/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:sugar"
+    },
+    "title": {
+      "translate": "advancements.sugards.sugar.sugar.title"
+    },
+    "description": {
+      "translate": "advancements.sugards.sugar.sugar.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_sugar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:sugar"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_sugar"
+    ]
+  ]
+}

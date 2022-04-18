@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "sugards:bismuth_pickaxe"
+    ]
+  },
+  "criteria": {
+    "has_bismuth_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:bismuth_crystal"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "sugards:bismuth_pickaxe"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bismuth_crystal",
+      "has_the_recipe"
+    ]
+  ]
+}

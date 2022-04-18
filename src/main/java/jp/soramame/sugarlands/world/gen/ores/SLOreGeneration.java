@@ -1,5 +1,9 @@
 package jp.soramame.sugarlands.world.gen.ores;
 
+import java.util.List;
+
+import com.google.common.collect.ImmutableList;
+
 import jp.soramame.sugarlands.config.SugarLandsConfigs;
 import jp.soramame.sugarlands.init.SLBlocks;
 import net.minecraft.block.BlockState;
@@ -20,19 +24,19 @@ public class SLOreGeneration {
 
 	public static void generateOres(final BiomeLoadingEvent event) {
 		/* なんでoverworld無いんですか？*/
-		if(event.getCategory().equals(Category.PLAINS)||event.getCategory().equals(Category.BEACH)
-				||event.getCategory().equals(Category.DESERT)||event.getCategory().equals(Category.EXTREME_HILLS)
-				||event.getCategory().equals(Category.FOREST)||event.getCategory().equals(Category.ICY)
-				||event.getCategory().equals(Category.JUNGLE)||event.getCategory().equals(Category.MESA)
-				||event.getCategory().equals(Category.MUSHROOM)||event.getCategory().equals(Category.OCEAN)
-				||event.getCategory().equals(Category.RIVER)||event.getCategory().equals(Category.SAVANNA)
-				||event.getCategory().equals(Category.SWAMP)||event.getCategory().equals(Category.TAIGA)) {
-			generateOre(event.getGeneration(), SLBlocks.BISMUTH_ORE.get().defaultBlockState(), 9, 16, 10);
-			generateOre(event.getGeneration(),SLBlocks.SUGAR_DIAMOND_ORE.get().defaultBlockState(),9,16,7);
-			if (SugarLandsConfigs.Common.isGen_sugar_block()) {
-				generateOre(event.getGeneration(), SLBlocks.SUGAR_BLOCK.get().defaultBlockState(), 16, 128, 20);
+		List<Category> ctg = ImmutableList.of(Category.PLAINS, Category.BEACH, Category.DESERT, Category.EXTREME_HILLS,
+				Category.FOREST, Category.ICY, Category.JUNGLE, Category.MESA, Category.MUSHROOM, Category.OCEAN,
+				Category.RIVER,Category.SAVANNA,Category.SWAMP,Category.TAIGA);
+		for(Category c:ctg) {
+			if(event.getCategory().equals(c)) {
+				generateOre(event.getGeneration(), SLBlocks.BISMUTH_ORE.get().defaultBlockState(), 9, 16, 10);
+				generateOre(event.getGeneration(),SLBlocks.SUGAR_DIAMOND_ORE.get().defaultBlockState(),9,16,7);
+				if (SugarLandsConfigs.Common.isGen_sugar_block()) {
+					generateOre(event.getGeneration(), SLBlocks.SUGAR_BLOCK.get().defaultBlockState(), 16, 128, 20);
+				}
 			}
-		}else if(event.getCategory().equals(Category.NETHER)) {
+		}
+		if(event.getCategory().equals(Category.NETHER)) {
 			generateNetherOre(event.getGeneration(), SLBlocks.SUGARRACK.get().defaultBlockState(), 14, 40, 10);
 		}else if(event.getCategory().equals(Category.THEEND)) {
 			generateTheEndOre(event.getGeneration(), SLBlocks.END_SUGAR_STONE.get().defaultBlockState(), 14, 40, 20);

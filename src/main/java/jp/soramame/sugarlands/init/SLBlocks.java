@@ -62,7 +62,7 @@ public class SLBlocks {
 					.strength(2.0F, 100.0F)
 					.harvestLevel(-1)
 					.harvestTool(ToolType.PICKAXE)
-					.lightLevel((lightlevel)->15)
+					.lightLevel(lightlevel->15)
 					));
 	public static final RegistryObject<Block> SUGAR_BLOCK =
 			BLOCKS.register("sugar_block",() -> new Sugar_Block(MOIST_SUGAR_BLOCK.get(),AbstractBlock.Properties.of(Material.SAND,DyeColor.WHITE)
@@ -145,7 +145,7 @@ public class SLBlocks {
 					.strength(2.0F,10.0F)
 					.harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE)
-					.lightLevel((bismuthflash) -> 15)
+					.lightLevel(bismuthflash -> 15)
 					));
 	public static final RegistryObject<Block> PUDDING_BLOCK =
 			BLOCKS.register("pudding_block", ()-> new Block(AbstractBlock.Properties.of(Material.STONE)
@@ -182,7 +182,7 @@ public class SLBlocks {
 					.harvestLevel(0)
 					.harvestTool(ToolType.PICKAXE)
 					.sound(SoundType.SLIME_BLOCK)
-					.lightLevel((dirtylight) -> 3)
+					.lightLevel(dirtylight-> 3)
 					));
 	public static final RegistryObject<Block> BLACK_ICE_CANDY =
 			BLOCKS.register("black_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.BLACK)
@@ -191,7 +191,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> BLUE_ICE_CANDY =
 			BLOCKS.register("blue_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.BLUE)
@@ -200,7 +200,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> BROWN_ICE_CANDY =
 			BLOCKS.register("brown_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.BROWN)
@@ -209,7 +209,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> CYAN_ICE_CANDY =
 			BLOCKS.register("cyan_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.CYAN)
@@ -218,7 +218,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> GRAY_ICE_CANDY =
 			BLOCKS.register("gray_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.GRAY)
@@ -227,7 +227,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> GREEN_ICE_CANDY =
 			BLOCKS.register("green_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.GREEN)
@@ -236,7 +236,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> LIGHT_BLUE_ICE_CANDY =
 			BLOCKS.register("light_blue_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.LIGHT_BLUE)
@@ -245,7 +245,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> LIGHT_GRAY_ICE_CANDY =
 			BLOCKS.register("light_gray_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.LIGHT_GRAY)
@@ -254,7 +254,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> LIME_ICE_CANDY =
 			BLOCKS.register("lime_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.LIME)
@@ -263,7 +263,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> MAGENTA_ICE_CANDY =
 			BLOCKS.register("magenta_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.MAGENTA)
@@ -272,7 +272,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> ORANGE_ICE_CANDY =
 			BLOCKS.register("orange_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.ORANGE)
@@ -281,7 +281,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> PINK_ICE_CANDY =
 			BLOCKS.register("pink_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.PINK)
@@ -290,7 +290,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> PURPLE_ICE_CANDY =
 			BLOCKS.register("purple_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.PURPLE)
@@ -299,7 +299,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> RED_ICE_CANDY =
 			BLOCKS.register("red_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.RED)
@@ -308,7 +308,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> WHITE_ICE_CANDY =
 			BLOCKS.register("white_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.WHITE)
@@ -317,7 +317,7 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 	public static final RegistryObject<Block> YELLOW_ICE_CANDY =
 			BLOCKS.register("yellow_ice_candy", ()-> new Block(AbstractBlock.Properties.of(Material.STONE,DyeColor.YELLOW)
@@ -326,14 +326,14 @@ public class SLBlocks {
 					.harvestTool(ToolType.PICKAXE)
 					.friction(0.989F)
 					.sound(SoundType.GLASS)
-					.lightLevel((icelight) -> {return 3;})
+					.lightLevel(icelight -> 3)
 					));
 
 	private static MaterialColor top;
 	private static MaterialColor side;
 	public static final RegistryObject<Block> SUGAR_LOG =
 			BLOCKS.register("sugar_log", ()-> new SLLogs(AbstractBlock.Properties.of(Material.WOOD,
-					(XZorY) -> XZorY.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? top : side)
+					XZorY -> XZorY.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? top : side)
 					.strength(2.0F).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.AXE), MaterialColor.QUARTZ, MaterialColor.QUARTZ));
 	public static final RegistryObject<Block> SUGAR_LEAVES =
 			BLOCKS.register("sugar_leaves", ()-> leaves());
@@ -444,9 +444,7 @@ public class SLBlocks {
 			BLOCKS.register("sugar_torch", ()-> new TorchBlock(AbstractBlock.Properties.of(Material.DECORATION)
 					.noCollission()
 					.instabreak()
-					.lightLevel((sugar)-> {
-						return 10;
-					})
+					.lightLevel(sugar-> 10)
 					.sound(SoundType.WOOD)
 					,ParticleTypes.END_ROD));
 	@SuppressWarnings("deprecation")
@@ -454,9 +452,7 @@ public class SLBlocks {
 			BLOCKS.register("wall_sugar_torch", ()-> new WallTorchBlock(AbstractBlock.Properties.of(Material.DECORATION)
 					.noCollission()
 					.instabreak()
-					.lightLevel((sugar)-> {
-						return 10;
-					})
+					.lightLevel(sugar-> 10)
 					.sound(SoundType.WOOD)
 					.dropsLike(SUGAR_TORCH.get())
 					,ParticleTypes.END_ROD));
@@ -540,7 +536,7 @@ public class SLBlocks {
 	}
 
 	private static RotatedPillarBlock log(MaterialColor top, MaterialColor side) {
-		return new RotatedPillarBlock(AbstractBlock.Properties.of(Material.WOOD, (XZorY) -> {
+		return new RotatedPillarBlock(AbstractBlock.Properties.of(Material.WOOD, XZorY -> {
 			return XZorY.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? top : side;
 		}).strength(2.0F).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.AXE));
 	}

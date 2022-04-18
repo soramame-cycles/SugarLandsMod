@@ -18,7 +18,7 @@ public class SLItemTags {
 
 	protected static final TagRegistry<Item> HELPER = TagRegistryManager.create(new ResourceLocation(SugarLandsCore.MOD_ID+":item"), ITagCollectionSupplier::getItems);
 
-	public static final INamedTag<Item> SUGAR_LOGS = bind("sugar_logs");
+	public static final INamedTag<Item> SUGAR_LOGS = bind("sugards:sugar_logs");
 
 	public static INamedTag<Item> bind(String name){
 		return HELPER.bind(name);

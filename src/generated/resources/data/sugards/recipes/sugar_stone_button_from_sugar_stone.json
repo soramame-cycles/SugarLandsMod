@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sugards:sugar_stone"
+    }
+  ],
+  "result": {
+    "item": "sugards:sugar_stone_button"
+  }
+}

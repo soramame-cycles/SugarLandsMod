@@ -1,0 +1,16 @@
+{
+	"conditions": [
+		{
+			"condition": "minecraft:match_tool",
+			"predicate": {
+				"item": "sugards:sugar_diamond_pickaxe"
+			}
+		},
+		{
+			"condition": "block_state_property",
+			"block": "minecraft:grass"
+		}
+	],
+	"seedItem": "minecraft:wheat_seeds",
+	"replacement": "sugards:azuki_been"
+}

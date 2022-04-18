@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "sugards:sugar_block"
+    },
+    "title": {
+      "translate": "advancements.sugards.sugar.root.title"
+    },
+    "description": {
+      "translate": "advancements.sugards.sugar.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "sugards:textures/block/sugar_block.png"
+  },
+  "criteria": {
+    "entered_world": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:air"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_world"
+    ]
+  ]
+}

@@ -1,9 +1,12 @@
 package jp.soramame.sugarlands.provider;
 
+import jp.soramame.sugarlands.SugarLandsCore;
 import jp.soramame.sugarlands.init.SLBiomes;
 import jp.soramame.sugarlands.init.SLBlocks;
 import jp.soramame.sugarlands.init.SLItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -16,7 +19,7 @@ public class SLEnUsLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		add("itemGroup.sugards", "SugarLands");
+		add(SugarLandsCore.SUGARD_TAB, "SugarLands");
 		add(SLBlocks.SUGAR_BLOCK.get(),"Sugar Block");
 		add(SLBlocks.SUGAR_STONE.get(), "Sugar Stone");
 		add(SLBlocks.SUGAR_CANDY.get(), "Sugar Candy");
@@ -94,12 +97,30 @@ public class SLEnUsLanguageProvider extends LanguageProvider {
 		add(SLItems.Pudding.get(), "Pudding");
 		add(SLItems.Raw_sugar.get(), "Raw Sugar");
 		add(SLItems.Bismuth_Crystal.get(), "Bismuth Crystal");
+		add(SLItems.Azuki_Been.get(), "Azuki Been");
+		add(SLItems.Azuki_Paste.get(), "Azuki Paste");
+		add(SLItems.Azuki_Paste_Bun.get(), "Azuki Paste Bun");
 		add(SLBlocks.SUGAR_PLANKS_FENCE_GATE.get(), "Sugar Planks Fence Gate");
 		add(SLBlocks.SUGAR_LOG_FENCE_GATE.get(), "sugar Log Fence Gate");
+		add();
+	}
+
+	private void add() {
+		addadvance("sugar.sugar", "Sweet Powder", "Get Sugar");
+		addadvance("sugar.root", "SugarLands", "In search of sweetness");
+		addadvance("sugar.sugar_block", "Sugar Hunter", "Get Sugar Block");
+		addadvance("sugar.rotten", "Isn't that rotten?", "Get Rotten Fresh Block");
 	}
 
 	private void add(Biome biome, String name) {
 		add(Util.makeDescriptionId("biome",biome.getRegistryName()),name);
 	}
-
+	private void add(ItemGroup i,String name) {
+		add(i.getDisplayName().getString(),name);
+	}
+	public void addadvance(String ad,String title,String desc) {
+		String modid = SugarLandsCore.MOD_ID;
+		add(Util.makeDescriptionId("advancements", new ResourceLocation(modid,ad+".title")),title);
+		add(Util.makeDescriptionId("advancements", new ResourceLocation(modid,ad+".description")),desc);
+	}
 }

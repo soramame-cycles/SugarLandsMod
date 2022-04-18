@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "sugards:azuki_paste_from_azuki_been_plus_sugar"
+    ]
+  },
+  "criteria": {
+    "has_azuki_been": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:azuki_been"
+          }
+        ]
+      }
+    },
+    "has_sugar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:sugar"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "sugards:azuki_paste_from_azuki_been_plus_sugar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_azuki_been",
+      "has_sugar",
+      "has_the_recipe"
+    ]
+  ]
+}

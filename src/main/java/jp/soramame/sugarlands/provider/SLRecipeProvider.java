@@ -18,7 +18,7 @@ import net.minecraft.data.SingleItemRecipeBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ITag;
+import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.util.IItemProvider;
 
 public class SLRecipeProvider extends RecipeProvider {
@@ -214,7 +214,7 @@ public class SLRecipeProvider extends RecipeProvider {
 		.group("wooden_trapdoor").unlockedBy("has_planks", has(in)).save(con);
 	}
 
-	private static void planksFromLog(Consumer<IFinishedRecipe> consumer, IItemProvider out, ITag<Item> in) {
+	private static void planksFromLog(Consumer<IFinishedRecipe> consumer, IItemProvider out, INamedTag<Item> in) {
 		ShapelessRecipeBuilder.shapeless(out, 4).requires(in).group("planks")
 		.unlockedBy("has_log", has(in)).save(consumer);
 	}

@@ -2,14 +2,22 @@ package jp.soramame.sugarlands.world.biome;
 
 import jp.soramame.sugarlands.world.gen.feature.SLFeatures;
 import jp.soramame.sugarlands.world.gen.feature.SLTreeConfigurations;
+import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.BiomeAmbience.GrassColorModifier;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.biome.MobSpawnInfo.Builder;
+import net.minecraft.world.biome.MobSpawnInfo.Spawners;
+import net.minecraft.world.biome.MoodSoundAmbience;
+import net.minecraft.world.biome.ParticleEffectAmbience;
+import net.minecraft.world.biome.SoundAdditionsAmbience;
 import net.minecraft.world.gen.GenerationStage.Decoration;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
@@ -51,8 +59,23 @@ public class SLBiomeFeatures {
 			.grassColorModifier(GrassColorModifier.NONE)
 			.foliageColorOverride(0)
 			.build();
+	public static final BiomeAmbience rottenwasteAmbience(){
+		BiomeAmbience.Builder rotten = new BiomeAmbience.Builder();
+		rotten
+		.waterColor(4159204)
+		.waterFogColor(4341314)
+		.fogColor(0x8000)
+		.skyColor(calculateSkyColor(2.0F))
+		.ambientParticle(new ParticleEffectAmbience(ParticleTypes.MYCELIUM, 0.118093334F))
+		.ambientLoopSound(SoundEvents.AMBIENT_BASALT_DELTAS_LOOP)
+		.ambientMoodSound(new MoodSoundAmbience(SoundEvents.AMBIENT_BASALT_DELTAS_MOOD, 6000, 8, 2.0D))
+		.ambientAdditionsSound(new SoundAdditionsAmbience(SoundEvents.AMBIENT_BASALT_DELTAS_ADDITIONS, 0.0111D))
+		.backgroundMusic(BackgroundMusicTracks.createGameMusic(SoundEvents.MUSIC_BIOME_BASALT_DELTAS)).build();
+		return rotten.build();
+	}
 
 	public static BiomeGenerationSettings.Builder sugarDesertSettings(){
+		BiomeGenerationSettings.Builder biomegenerationsettings$builder = new BiomeGenerationSettings.Builder();
 		biomegenerationsettings$builder
 		.addFeature(Decoration.SURFACE_STRUCTURES, SLFeatures.SUGAR_WELL)
 		.addFeature(Decoration.UNDERGROUND_ORES, Features.ORE_GRANITE)
@@ -70,6 +93,7 @@ public class SLBiomeFeatures {
 		return biomegenerationsettings$builder;
 	}
 	public static BiomeGenerationSettings.Builder puddingPlainSettings(){
+		BiomeGenerationSettings.Builder biomegenerationsettings$builder = new BiomeGenerationSettings.Builder();
 		biomegenerationsettings$builder
 		.addFeature(Decoration.UNDERGROUND_ORES, Features.ORE_GRANITE)
 		.addFeature(Decoration.UNDERGROUND_ORES, Features.ORE_DIORITE)
@@ -89,6 +113,7 @@ public class SLBiomeFeatures {
 		return biomegenerationsettings$builder;
 	}
 	public static BiomeGenerationSettings.Builder sugarForestSettings() {
+		BiomeGenerationSettings.Builder biomegenerationsettings$builder = new BiomeGenerationSettings.Builder();
 		DefaultBiomeFeatures.addDefaultOverworldLandStructures(biomegenerationsettings$builder);
 		biomegenerationsettings$builder.addStructureStart(StructureFeatures.RUINED_PORTAL_STANDARD);
 		DefaultBiomeFeatures.addDefaultCarvers(biomegenerationsettings$builder);
@@ -104,6 +129,7 @@ public class SLBiomeFeatures {
 		return biomegenerationsettings$builder;
 	}
 	public static BiomeGenerationSettings.Builder icecandySpikesSettings(){
+		BiomeGenerationSettings.Builder biomegenerationsettings$builder = new BiomeGenerationSettings.Builder();
 		biomegenerationsettings$builder.addFeature(Decoration.SURFACE_STRUCTURES, Features.ICE_PATCH);
 		biomegenerationsettings$builder.addFeature(Decoration.SURFACE_STRUCTURES, Features.ICE_SPIKE);
 		biomegenerationsettings$builder.addFeature(Decoration.RAW_GENERATION, SLFeatures.ICECANDY);
@@ -120,6 +146,12 @@ public class SLBiomeFeatures {
 		sugaForestTree(biomegenerationsettings$builder, 50);
 		return biomegenerationsettings$builder;
 	}
+	public static BiomeGenerationSettings.Builder rottenWasteSettings(){
+		BiomeGenerationSettings.Builder biomegenerationsettings$builder = new BiomeGenerationSettings.Builder();
+		DefaultBiomeFeatures.addAncientDebris(biomegenerationsettings$builder);
+
+		return biomegenerationsettings$builder;
+	}
 
 	public static void sugaForestTree(BiomeGenerationSettings.Builder builder,int chance) {
 		//Decoration.VEGETAL_DECORATIONが正解なのだろうが、それで実行するとハゲの森が出来上がる(何も生成されない)
@@ -130,42 +162,52 @@ public class SLBiomeFeatures {
 	}
 
 	public static MobSpawnInfo.Builder sugarForestMobSpawn(){
+		MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
 		DefaultBiomeFeatures.farmAnimals(mobspawninfo$builder);
 		DefaultBiomeFeatures.commonSpawns(mobspawninfo$builder);
 		mobspawninfo$builder
-			.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.WOLF, 8, 4, 4))
-			.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.RABBIT, 4, 2, 3))
-			.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.FOX, 8, 2, 4))
-			.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.STRAY, 80, 4, 4));
+			.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.WOLF, 8, 4, 4))
+			.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.RABBIT, 4, 2, 3))
+			.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.FOX, 8, 2, 4))
+			.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.STRAY, 80, 4, 4));
 		return mobspawninfo$builder;
 	}
 	public static MobSpawnInfo.Builder sugarDesertSpawn(){
+		MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
 		mobspawninfo$builder
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.RABBIT, 4, 2, 3))
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.CHICKEN, 10, 4, 4))
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.COW, 8, 4, 4));
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.RABBIT, 4, 2, 3))
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.CHICKEN, 10, 4, 4))
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.COW, 8, 4, 4));
 		return mobspawninfo$builder;
 	}
 	public static MobSpawnInfo.Builder puddingPlainSpawn(){
+		MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
 		mobspawninfo$builder
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.SHEEP, 12, 4, 4))
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.PIG, 10, 4, 4))
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.CHICKEN, 10, 4, 4))
-		.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.COW, 8, 4, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.SPIDER, 100, 4, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 100, 4, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIE_VILLAGER, 100, 1, 1))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.SKELETON, 100, 4, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.CREEPER, 100, 4, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.SLIME, 100, 4, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ENDERMAN, 10, 1, 4))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.WITCH, 5, 1, 1))
-		.addSpawn(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.STRAY, 80, 4, 4));
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.SHEEP, 12, 4, 4))
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.PIG, 10, 4, 4))
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.CHICKEN, 10, 4, 4))
+		.addSpawn(EntityClassification.CREATURE, new Spawners(EntityType.COW, 8, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.SPIDER, 100, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.ZOMBIE, 100, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.ZOMBIE_VILLAGER, 100, 1, 1))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.SKELETON, 100, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.CREEPER, 100, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.SLIME, 100, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.ENDERMAN, 10, 1, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.WITCH, 5, 1, 1))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.STRAY, 80, 4, 4));
 		return mobspawninfo$builder;
 	}
 	public static MobSpawnInfo.Builder icecandySpikesSpawn(){
+		MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
 		DefaultBiomeFeatures.snowySpawns(mobspawninfo$builder);
 		return mobspawninfo$builder;
 	}
-
+	public static MobSpawnInfo.Builder rottenWasteSpawn(){
+		MobSpawnInfo.Builder mobspawninfo$builder = new Builder();
+		mobspawninfo$builder
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.ZOMBIFIED_PIGLIN, 100, 4, 4))
+		.addSpawn(EntityClassification.MONSTER, new Spawners(EntityType.ZOGLIN,1,1,1));
+		return mobspawninfo$builder;
+	}
 }

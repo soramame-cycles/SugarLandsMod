@@ -1,0 +1,33 @@
+{
+  "parent": "sugards:sugar/root",
+  "display": {
+    "icon": {
+      "item": "sugards:sugar_stone"
+    },
+    "title": {
+      "translate": "advancements.sugards.sugar.sugar_desert.title"
+    },
+    "description": {
+      "translate": "advancements.sugards.sugar.sugar_desert.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "visit_sugar_desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "sugards:sugar_desert"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visit_sugar_desert"
+    ]
+  ]
+}

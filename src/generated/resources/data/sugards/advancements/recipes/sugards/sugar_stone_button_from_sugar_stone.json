@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "sugards:sugar_stone_button_from_sugar_stone"
+    ]
+  },
+  "criteria": {
+    "has_sugar_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:sugar_stone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "sugards:sugar_stone_button_from_sugar_stone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_stone",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "sugards:sugar_diamond"
+    }
+  },
+  "result": {
+    "item": "sugards:sugar_diamond_pickaxe"
+  }
+}

@@ -18,7 +18,7 @@ public class SugarLandsConfigs {
 	private static String config = SugarLandsCore.MOD_ID + ".config.";
 
 	public static class Common{
-		//@SLConfig.BooleanValue(value = true)
+		@SLConfig
 		private static boolean gen_sugar_block = true;
 
 		public static boolean isGen_sugar_block() {

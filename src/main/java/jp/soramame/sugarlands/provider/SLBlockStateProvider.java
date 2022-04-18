@@ -2,9 +2,6 @@ package jp.soramame.sugarlands.provider;
 
 import java.util.Objects;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import jp.soramame.sugarlands.init.SLBlocks;
 import net.minecraft.block.AbstractButtonBlock;
 import net.minecraft.block.Block;
@@ -32,9 +29,6 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class SLBlockStateProvider extends BlockStateProvider {
-
-	@SuppressWarnings("unused")
-	private static final Logger LOGGER = LogManager.getLogger();
 
 	public SLBlockStateProvider(DataGenerator gen,String modid,ExistingFileHelper exFileHelper) {
 		super(gen,modid,exFileHelper);
@@ -174,10 +168,10 @@ public class SLBlockStateProvider extends BlockStateProvider {
 	}
 	public void trapdoorWithItem(TrapDoorBlock block,ResourceLocation rl,boolean orientable) {
 		trapdoorBlock(block, rl, orientable);
-		if(orientable == false) {
-			simpleBlockItem(block,trapdoor(block,rl));
-		}else{
+		if(orientable) {
 			simpleBlockItem(block,trapdoorOrientable(block,rl));
+		}else{
+			simpleBlockItem(block,trapdoor(block,rl));
 		}
 	}
 	public void torchWithItem(Block block,ResourceLocation torch) {

@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "minecraft:sugar_logs"
+      "tag": "sugards:sugar_logs"
     }
   ],
   "result": {

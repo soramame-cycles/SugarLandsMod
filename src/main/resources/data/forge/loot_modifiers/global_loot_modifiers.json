@@ -1,6 +1,6 @@
 {
-  "replace": false,
-  "entries": [
-    "sugards:azuki"
-  ]
+	"replace": false,
+	"entries": [
+		"sugards:azuki_from_grass"
+	]
 }

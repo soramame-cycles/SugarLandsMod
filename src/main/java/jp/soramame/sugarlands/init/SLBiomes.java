@@ -33,6 +33,7 @@ public class SLBiomes {
 	public static final RegistryKey<Biome> PUDDING_PLAIN = register("pudding_plain");
 	public static final RegistryKey<Biome> SUGAR_FOREST = register("sugar_forest");
 	public static final RegistryKey<Biome> ICECANDY_SPIKES = register("icecandy_spikes");
+	//public static final RegistryKey<Biome> ROTTEN_WASTES = register("rotten_wastes");
 
 
 	public static RegistryKey<Biome> register(String name){

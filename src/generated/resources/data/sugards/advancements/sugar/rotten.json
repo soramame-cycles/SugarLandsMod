@@ -1,0 +1,35 @@
+{
+  "parent": "sugards:sugar/root",
+  "display": {
+    "icon": {
+      "item": "sugards:rotten_flesh_block"
+    },
+    "title": {
+      "translate": "advancements.sugards.sugar.rotten.title"
+    },
+    "description": {
+      "translate": "advancements.sugards.sugar.rotten.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_rotten_fresh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "sugards:rotten_flesh_block"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_rotten_fresh"
+    ]
+  ]
+}

@@ -25,6 +25,7 @@ public class SLBlockTagsProvider extends BlockTagsProvider {
 		this.tag(BlockTags.WOODEN_FENCES).add(SLBlocks.SUGAR_LOG_FENCE.get(),SLBlocks.SUGAR_PLANKS_FENCE.get());
 		this.tag(BlockTags.WALLS).add(SLBlocks.SUGAR_BRICKS_WALL.get(),SLBlocks.SUGAR_COBBLESTONE_WALL.get(),SLBlocks.SUGAR_STONE_WALL.get());
 		this.tag(BlockTags.FENCE_GATES).add(SLBlocks.SUGAR_PLANKS_FENCE_GATE.get(),SLBlocks.SUGAR_LOG_FENCE_GATE.get());
+		this.tag(BlockTags.WOODEN_DOORS).add(SLBlocks.SUGAR_DOOR.get());
 	}
 
 }
