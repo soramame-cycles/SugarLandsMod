@@ -1,0 +1,120 @@
+{
+  "parent": "sugards:sugar/visit_sugar_desert",
+  "criteria": {
+    "visit_sugards_icecandy_spikes": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "sugards:icecandy_spikes"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "visit_sugards_pudding_plain": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "sugards:pudding_plain"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "visit_sugards_rotten_wastes": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "sugards:rotten_wastes"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "visit_sugards_sugar_desert": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "sugards:sugar_desert"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "visit_sugards_sugar_forest": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "sugards:sugar_forest"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.sugards.sugar.sweet_adventure.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "sugards:sugar_diamond_block"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.sugards.sugar.sweet_adventure.title"
+    }
+  },
+  "requirements": [
+    [
+      "visit_sugards_sugar_desert"
+    ],
+    [
+      "visit_sugards_sugar_forest"
+    ],
+    [
+      "visit_sugards_pudding_plain"
+    ],
+    [
+      "visit_sugards_icecandy_spikes"
+    ],
+    [
+      "visit_sugards_rotten_wastes"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

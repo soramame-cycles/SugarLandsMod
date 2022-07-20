@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "sugards:block/sugar_cobblestone",
+    "side": "sugards:block/sugar_cobblestone",
+    "top": "sugards:block/sugar_cobblestone"
+  }
+}

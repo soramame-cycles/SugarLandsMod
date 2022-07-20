@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "sugards:bismuth_crystal"
+    }
+  },
+  "pattern": [
+    "WWW",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "sugards:bismuth_pickaxe"
+  }
+}

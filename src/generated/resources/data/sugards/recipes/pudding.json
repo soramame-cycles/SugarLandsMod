@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "sugards:caramel_sauce"
+    },
+    "i": {
+      "item": "sugards:pudding_block"
+    }
+  },
+  "pattern": [
+    "#",
+    "i"
+  ],
+  "result": {
+    "count": 4,
+    "item": "sugards:pudding"
+  }
+}

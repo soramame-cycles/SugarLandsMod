@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sugards:block/sugar_planks_slab"
+    },
+    "type=double": {
+      "model": "sugards:block/sugar_planks"
+    },
+    "type=top": {
+      "model": "sugards:block/sugar_planks_slab_top"
+    }
+  }
+}

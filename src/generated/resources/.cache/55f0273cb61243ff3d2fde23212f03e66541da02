@@ -1,0 +1,13 @@
+// 1.19	2022-07-10T17:14:17.7897473	Tags for minecraft:worldgen/biome
+0699b4982a2d1ab3d3c65240debef47ff188bbfe data/forge/tags/worldgen/biome/is_cold.json
+796c22819227165a6b393b027b143cef2d007ed3 data/forge/tags/worldgen/biome/is_hot.json
+796c22819227165a6b393b027b143cef2d007ed3 data/forge/tags/worldgen/biome/is_hot/overworld.json
+e9ca2fdca418538381df7a094197caf5b256fc6e data/forge/tags/worldgen/biome/is_plains.json
+796c22819227165a6b393b027b143cef2d007ed3 data/forge/tags/worldgen/biome/is_sandy.json
+cbe5725338d589f36fd6be3b106764861b174e51 data/forge/tags/worldgen/biome/is_snowy.json
+796c22819227165a6b393b027b143cef2d007ed3 data/minecraft/tags/worldgen/biome/has_structure/desert_pyramid.json
+e9ca2fdca418538381df7a094197caf5b256fc6e data/minecraft/tags/worldgen/biome/has_structure/mineshaft.json
+e9ca2fdca418538381df7a094197caf5b256fc6e data/minecraft/tags/worldgen/biome/has_structure/stronghold.json
+4292fa4285a8505dda9ead288f87cdf5479c4d85 data/minecraft/tags/worldgen/biome/is_forest.json
+ee17973e95e538bad09f6f7ae245655cdac9d25a data/minecraft/tags/worldgen/biome/is_nether.json
+e9ca2fdca418538381df7a094197caf5b256fc6e data/minecraft/tags/worldgen/biome/is_overworld.json

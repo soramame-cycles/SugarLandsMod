@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "anpan",
+  "key": {
+    "T": {
+      "item": "sugards:poppy_seed"
+    },
+    "n": {
+      "item": "sugards:azuki_paste"
+    },
+    "t": {
+      "item": "minecraft:bread"
+    }
+  },
+  "pattern": [
+    " T ",
+    " n ",
+    " t "
+  ],
+  "result": {
+    "item": "sugards:azuki_paste_bun"
+  }
+}

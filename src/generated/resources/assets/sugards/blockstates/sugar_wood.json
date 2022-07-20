@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "sugards:block/sugar_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "sugards:block/sugar_wood"
+    },
+    "axis=z": {
+      "model": "sugards:block/sugar_wood",
+      "x": 90
+    }
+  }
+}

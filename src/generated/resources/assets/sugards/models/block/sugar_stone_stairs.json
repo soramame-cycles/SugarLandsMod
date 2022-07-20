@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "sugards:block/sugar_stone",
+    "side": "sugards:block/sugar_stone",
+    "top": "sugards:block/sugar_stone"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "sugards:block/sugar_cobblestone",
+    "side": "sugards:block/sugar_cobblestone_slab_double"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 50,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "sugards:crushed_sugar_cane"
+  },
+  "result": "sugards:raw_sugar"
+}

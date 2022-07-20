@@ -1,0 +1,21 @@
+// 1.19	2022-07-17T11:53:43.9749583	Tags for minecraft:block
+5fd0a56e0463273bba9802bad9b2813f05e9139c data/minecraft/tags/blocks/animals_spawnable_on.json
+5fd0a56e0463273bba9802bad9b2813f05e9139c data/minecraft/tags/blocks/beacon_base_blocks.json
+0b49f8c59f08e16ed32a853534320cbe64e22f1d data/minecraft/tags/blocks/dragon_immune.json
+09e4fd3e92798a982b6a631df15165a499ef8354 data/minecraft/tags/blocks/fence_gates.json
+5078af7a9f1711ad5e77f8e983fac30f66d5991f data/minecraft/tags/blocks/goats_spawnable_on.json
+753fa8914a5d95d1d366b4b6c1acd1310c2b4bae data/minecraft/tags/blocks/infiniburn_end.json
+753fa8914a5d95d1d366b4b6c1acd1310c2b4bae data/minecraft/tags/blocks/infiniburn_nether.json
+753fa8914a5d95d1d366b4b6c1acd1310c2b4bae data/minecraft/tags/blocks/infiniburn_overworld.json
+95e7b41a731d6682aa88be5fa0b443a0446a0188 data/minecraft/tags/blocks/leaves.json
+8a88962fc11954bfb7cba62d9252c558c6c0f62c data/minecraft/tags/blocks/logs.json
+96523a9078d363bf18b7d7359a58d059c5b9ab2f data/minecraft/tags/blocks/mineable/axe.json
+72fe7e7703765002d707ea499ccbf6f6cf18d05b data/minecraft/tags/blocks/mineable/hoe.json
+b638dfbb2166eacf453bc1bbffb93d2e3fad91ee data/minecraft/tags/blocks/mineable/pickaxe.json
+423d507c43f6ed167225416b2fb24def97cec8db data/minecraft/tags/blocks/mineable/shovel.json
+45c347d1dda99310a8572e3cfb7a87ffee84a626 data/minecraft/tags/blocks/needs_iron_tool.json
+1d7c519af435d3fea0d2c6d5287d97ed701acbf6 data/minecraft/tags/blocks/needs_stone_tool.json
+187bf1a5e0df352fe37034a2db1cacf1b15b027f data/minecraft/tags/blocks/saplings.json
+72869cd5ebbe57f23adece82e39c7e0c1d75ae2f data/minecraft/tags/blocks/walls.json
+634ea764ab19d4b130be66130feb9ced90dc172a data/minecraft/tags/blocks/wooden_doors.json
+940336d2e153a2b04846d3467473160b7f1b9eaf data/minecraft/tags/blocks/wooden_fences.json

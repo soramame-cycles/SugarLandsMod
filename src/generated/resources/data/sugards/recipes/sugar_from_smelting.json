@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "sugards:raw_sugar"
+  },
+  "result": "minecraft:sugar"
+}

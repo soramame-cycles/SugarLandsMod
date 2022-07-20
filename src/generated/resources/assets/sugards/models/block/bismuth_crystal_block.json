@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sugards:block/bismuth_crystal_block"
+  }
+}

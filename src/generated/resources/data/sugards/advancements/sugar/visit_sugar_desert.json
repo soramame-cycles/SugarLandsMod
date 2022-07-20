@@ -1,0 +1,41 @@
+{
+  "parent": "sugards:sugar/root",
+  "criteria": {
+    "visit_sugar_desert": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "sugards:sugar_desert"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.sugards.sugar.sugar_desert.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "sugards:sugar_stone"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.sugards.sugar.sugar_desert.title"
+    }
+  },
+  "requirements": [
+    [
+      "visit_sugar_desert"
+    ]
+  ]
+}

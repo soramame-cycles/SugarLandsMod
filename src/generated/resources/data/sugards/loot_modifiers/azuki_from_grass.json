@@ -1,0 +1,17 @@
+{
+  "type": "sugards:azuki_from_grass",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": [
+          "sugards:sugar_diamond_pickaxe"
+        ]
+      }
+    },
+    {
+      "block": "minecraft:grass",
+      "condition": "minecraft:block_state_property"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "sugards:sugar_cobblestone"
+  },
+  "result": "sugards:sugar_cobblestone_slab"
+}

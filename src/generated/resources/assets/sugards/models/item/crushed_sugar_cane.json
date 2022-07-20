@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sugards:item/crushed_sugar_cane"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "sugards:sugar_leaves"
+  },
+  "result": "sugards:azuki_been"
+}

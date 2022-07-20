@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sugards:block/raw_sugar_block"
+    }
+  }
+}

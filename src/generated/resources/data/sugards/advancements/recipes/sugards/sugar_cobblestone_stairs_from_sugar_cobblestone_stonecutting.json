@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sugar_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sugards:sugar_cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sugards:sugar_cobblestone_stairs_from_sugar_cobblestone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_cobblestone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sugards:sugar_cobblestone_stairs_from_sugar_cobblestone_stonecutting"
+    ]
+  }
+}

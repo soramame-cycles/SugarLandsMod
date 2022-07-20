@@ -1,0 +1,21 @@
+{
+  "values": [
+    "sugards:sugar_log",
+    "sugards:sugar_planks",
+    "sugards:sugar_planks_stairs",
+    "sugards:sugar_log_stairs",
+    "sugards:sugar_planks_slab",
+    "sugards:sugar_log_slab",
+    "sugards:sugar_log_fence",
+    "sugards:sugar_planks_fence",
+    "sugards:sugar_candy_pane",
+    "sugards:sugar_planks_trapdoor",
+    "sugards:sugar_door",
+    "sugards:sugar_planks_pressure_plate",
+    "sugards:stripped_sugar_log",
+    "sugards:sugar_wood",
+    "sugards:stripped_sugar_wood",
+    "sugards:sugar_planks_fence_gate",
+    "sugards:sugar_log_fence_gate"
+  ]
+}

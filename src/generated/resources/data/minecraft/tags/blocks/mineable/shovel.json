@@ -1,0 +1,10 @@
+{
+  "values": [
+    "sugards:sugar_block",
+    "sugards:raw_sugar_block",
+    "sugards:pudding_block",
+    "sugards:caramel_sauce",
+    "sugards:cookie_block",
+    "sugards:rotten_flesh_block"
+  ]
+}
